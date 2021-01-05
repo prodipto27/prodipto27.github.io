@@ -1,0 +1,344 @@
+<html>
+
+<head>
+	<meta name="robots" content="noindex" />
+	<title>All Online Class Zoom Link</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="manifest" href="manifest.json">
+	</link>
+	<script src="manup.min.js"></script>
+	<meta name="theme-color" content="#FFFFFF">
+
+	<link rel="icon" href="https://prodipto27.github.io/images/favicon.ico" type="image/ico" sizes="48x48">
+	<meta property="og:url" content="https://prodipto27.github.io" />
+	<meta property="og:type" content="website" />
+	<meta name="theme-color" content="#FFFFFF">
+	<meta property="og:title" content="অ্যাহ!" />
+	<meta property="og:description" content="অনলাইন ক্লাসের আইডি আর পাসওয়ার্ড" />
+	<meta property="og:image" content="https://prodipto27.github.io/images/ist_logo.png" />
+	<meta content='200px' property='og:image:width' />
+	<meta content='200px' property='og:image:height' />
+	<meta property="fb:app_id" content="1145722559175311" />
+
+	<link href="md/material-components-web.min.css" rel="stylesheet">
+	<script src="md/material-components-web.min.js"></script>
+	<link rel="stylesheet" href="md/md-icon.css">
+
+
+
+	<style>
+		#main {
+			margin-top: 5%;
+		}
+
+		.container {
+			position: fixed;
+			overflow: hidden;
+			width: 100vw;
+			padding-top: 56.25%;
+			/* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+		}
+
+		/* Then style the iframe to fit in the container div with full height and width */
+		.responsive-iframe {
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 100vw;
+			height: 100vh;
+		}
+	</style>
+
+	<script>
+		function clearAcceptListener() {
+			var old_element = document.getElementsByClassName("mdc-dialog")[0];
+			var new_element = old_element.cloneNode(true);
+			old_element.remove();
+			document.body.prepend(new_element);
+
+		}
+		//var dialog = new mdc.dialog.MDCDialog(document.querySelector('.mdc-dialog'));
+
+		var stat = "";
+		if ("serviceWorker" in navigator) {
+			if (navigator.serviceWorker.controller) {
+				console.log("An active service worker found, no need to register");
+			} else {
+				// Register the service worker
+				navigator.serviceWorker
+					.register("/pwabuilder-sw.js", {
+						scope: "/"
+					})
+					.then(function (reg) {
+						console.log("Service worker has been registered for scope: " + reg.scope);
+					});
+			}
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+	<script>
+		window.fbAsyncInit = function () {
+			FB.init({
+				appId: '1145722559175311',
+				xfbml: true,
+				version: 'v9.0'
+			});
+			FB.AppEvents.logPageView();
+		};
+
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) { return; }
+			js = d.createElement(s); js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<script type="module">
+		import './pwaupdate.js';
+
+		const el = document.createElement('pwa-update');
+		document.body.appendChild(el);
+	</script>
+
+	<script>
+		//var menu = new mdc.menu.MDCMenu(document.querySelector('.mdc-menu'));
+		function openCornerMenu() {
+			var menu = new mdc.menu.MDCMenu(document.getElementsByClassName('mdc-menu')[0]);
+			menu.open = true;
+		}
+	</script>
+	<!--<script>
+		function hideBanner() {
+			document.getElementById("app-banner").style.display = "none";
+		}
+
+		if (window.matchMedia('(display-mode: standalone)').matches) {
+			console.log('display-mode is standalone');
+			hideBanner();
+		}
+		else {
+			console.log('display-mode isn\'t standalone');
+		}
+
+		let deferredPrompt;
+
+		const addBtn = document.querySelector('#pwa-install-button');
+		//addBtn.style.display = 'none';
+
+		window.addEventListener('beforeinstallprompt', (e) => {
+			// Prevent Chrome 67 and earlier from automatically showing the prompt
+			e.preventDefault();
+			// Stash the event so it can be triggered later.
+			deferredPrompt = e;
+			// Update UI to notify the user they can add to home screen
+			//addBtn.style.display = 'block';
+
+			addBtn.addEventListener('click', (e) => {
+				// hide our user interface that shows our A2HS button
+				//addBtn.style.display = 'none';
+				// Show the prompt
+				deferredPrompt.prompt();
+				// Wait for the user to respond to the prompt
+				deferredPrompt.userChoice.then((choiceResult) => {
+					if (choiceResult.outcome === 'accepted') {
+						console.log('User accepted the A2HS prompt');
+						hideBanner();
+					} else {
+						console.log('User dismissed the A2HS prompt');
+					}
+					deferredPrompt = null;
+				});
+			});
+		});
+	</script>-->
+
+	<!-- <script>
+		
+	</script> -->
+
+	<script src="js/sounds.js"></script>
+
+	<!-- App Bar -->
+
+	<header class="mdc-top-app-bar app-bar" id="app-bar" style="top: 0px; left: 0px;">
+		<div class="mdc-top-app-bar__row">
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+				<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+				<span class="mdc-top-app-bar__title">Online Class Credentials</span>
+			</section>
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+				<button id='install-button' onclick="pwaInstall()"
+					class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+					aria-label="Favorite">favorite</button>
+				<button onclick="openCornerMenu()"
+					class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">
+
+					more_vert
+				</button>
+			</section>
+		</div>
+	</header>
+	<aside class="mdc-drawer mdc-drawer--modal" style="top: 0px; left: 0px;">
+		<div class="mdc-drawer__header">
+			<img src="https://prodipto27.github.io/images/ist_logo.png" width="90px" />
+			<h3 class="mdc-drawer__title">Prodipto27</h3>
+			<h6 class="mdc-drawer__subtitle">prodipto27.github.io</h6>
+		</div>
+		<div class="mdc-drawer__content">
+			<nav class="mdc-list">
+				<!--<a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" tabindex="0">-->
+				<a class="mdc-list-item mdc-list-item--activated"
+					onclick='loadIframe("Online Class Credentials", "pages/credentials.html")' href="#"
+					aria-current="page" tabindex="0">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">vpn_key</i>
+					<span class="mdc-list-item__text">Online Class Credentials</span>
+				</a>
+				<a class="mdc-list-item" onclick='loadIframe("Class Routine", "pages/routine.html")' href="#">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">event</i>
+					<span class="mdc-list-item__text">Class Routine</span>
+				</a>
+				<a class="mdc-list-item" onclick='loadIframe("Syllabus", "pages/syllabus.html")' href="#">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
+					<span class="mdc-list-item__text">Syllabus</span>
+				</a>
+				<a class="mdc-list-item" onclick="showSnackbar('Coming Soon!', 'OK');" href="#">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">menu_book</i>
+					<span class="mdc-list-item__text">Books</span>
+				</a>
+				<a class="mdc-list-item" onclick="openFbPost();" href="#">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">video_library</i>
+					<span class="mdc-list-item__text">Recorded Classes</span>
+				</a>
+			</nav>
+		</div>
+	</aside>
+
+	<div class="mdc-drawer-scrim"></div>
+	<div id="main-content">Main Content</div>
+	<script src="js/md-nav.js"></script>
+	<!-- App Bar -->
+
+	<div onclick="openCornerMenu()" style="float: right; top:0;" class="mdc-menu-surface--anchor">
+		<div class="mdc-menu mdc-menu-surface">
+			<ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+				<li id='install-menu' onclick="pwaInstall()" class="mdc-list-item" role="menuitem">
+					<span class="mdc-list-item__ripple"></span>
+					<span class="mdc-list-item__text">Install App</span>
+				</li>
+				<li onclick="hudai()" class="mdc-list-item" role="menuitem">
+					<span class="mdc-list-item__ripple"></span>
+					<span class="mdc-list-item__text">হুদাই!</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container">
+		<iframe style="border-width: 0px;" id="ifrm" allow="fullscreen" class="responsive-iframe"
+			src="pages/credentials.html"></iframe>
+
+	</div>
+	<script src="js/iframe-loader.js"></script>
+
+	<div class="mdc-snackbar">
+		<div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+			<div class="mdc-snackbar__label" aria-atomic="false">
+				Can't send photo. Retry in 5 seconds.
+			</div>
+			<div class="mdc-snackbar__actions" aria-atomic="true">
+				<button type="button" class="mdc-button mdc-snackbar__action">
+					<div class="mdc-button__ripple"></div>
+					<span class="mdc-button__label">Retry</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/md-snackbar.js"></script>
+
+	<!--Normal Alert Dialog-->
+	<div class="mdc-dialog">
+		<div class="mdc-dialog__container">
+			<div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
+				aria-describedby="my-dialog-content">
+				<!--<img align="center" src="https://prodipto27.github.io/images/ist_logo.png" width="90px" />-->
+				<div class="mdc-dialog__content" id="my-dialog-content">
+					গোগনীয়তার খাতিরে ভিডিও প্লেলিস্টগুলোর লিংক এখানে না দিয়ে লিংক সম্বলিত ফেসবুক পোস্টে তোমাকে নিয়ে
+					যাওয়া হচ্ছে।
+				</div>
+				<div class="mdc-dialog__actions">
+					<button id="dialog-cancel" type="button" class="mdc-button mdc-dialog__button"
+						data-mdc-dialog-action="cancel">
+						<div class="mdc-button__ripple"></div>
+						<span class="mdc-button__label">Cancel</span>
+					</button>
+					<button id="pwa-install-accept" type="button" class="mdc-button mdc-dialog__button"
+						data-mdc-dialog-action="accept" data-mdc-dialog-button-default>
+						<div class="mdc-button__ripple"></div>
+						<span class="mdc-button__label">Accept</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="mdc-dialog__scrim"></div>
+	</div>
+
+	<!--Facebook Link Share-->
+	<div class="mdc-dialog">
+		<div class="mdc-dialog__container">
+			<div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
+				aria-describedby="my-dialog-content">
+				<!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+				<h2 class="mdc-dialog__title" id="my-dialog-title">Choose a medium</h2>
+				<div class="mdc-dialog__content" id="my-dialog-content">
+					<ul class="mdc-list mdc-list--avatar-list">
+						<li id='fbapp' class="mdc-list-item" tabindex="0" data-mdc-dialog-action="none">
+							<span class="mdc-list-item__text">Facebook App (Android)</span>
+						</li>
+						<li id='fbapplite' class="mdc-list-item" data-mdc-dialog-action="callisto">
+							<span class="mdc-list-item__text">Facebook Lite App (Android)</span>
+						</li>
+						<li id="fbbrowser" class="mdc-list-item" data-mdc-dialog-action="callisto">
+							<span class="mdc-list-item__text">Browser</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mdc-dialog__scrim"></div>
+	</div>
+
+	<script src="js/md-dialog.js"></script>
+	<script src="js/open-facebook-post.js"></script>
+	<script src="js/pwa-install.js"></script>
+
+	<script>
+		if (window.matchMedia('(display-mode: standalone)').matches == false) {
+			showSnackbar("To install the app on device, tap on the heart icon above!", 'OK');
+		}
+		else {
+			document.getElementById('install-button').remove();
+			document.getElementById('install-menu').remove();
+		}
+
+		document.getElementById('dialog-cancel').addEventListener('click', (e) => {
+			document.getElementsByClassName("mdc-dialog__button")[1].id = 'pwa-install-accept';
+		});
+	</script>
+
+</body>
+
+</html>
