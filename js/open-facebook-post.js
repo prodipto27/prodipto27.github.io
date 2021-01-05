@@ -36,7 +36,7 @@
 
 var link = "www.facebook.com/groups/IST.CSE27th/permalink/613081512739482/";
 
-function openFbVidLinkPost() {
+function openFbPost() {
 
     var ua = navigator.userAgent.toLowerCase();
     var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
