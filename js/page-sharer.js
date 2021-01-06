@@ -18,12 +18,14 @@ function copyText(str) {
 }
 
 
-var urlLastSegment = document.getElementById('ifrm').src.split("/").pop();
-console.log(urlLastSegment);
-var urlToShare = document.location.protocol + "//" + document.location.hostname + ((document.location.port == '') ? '' : ':' + document.location.port) + "/?page=" + urlLastSegment;
+var urlLastSegment;
+//console.log(urlLastSegment);
+var urlToShare;
 
 
 function shareThisPage() {
+    urlLastSegment = document.getElementById('ifrm').src.split("/").pop();
+    urlToShare = document.location.protocol + "//" + document.location.hostname + ((document.location.port == '') ? '' : ':' + document.location.port) + "/?page=" + urlLastSegment;
     if (navigator.share) {
         navigator.share({
             title: document.title,
