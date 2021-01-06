@@ -42,7 +42,7 @@ function openFbPost() {
     var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
 
     if (isAndroid) {
-        var fbDialog = new mdc.dialog.MDCDialog(document.getElementsByClassName('mdc-dialog')[1]);
+        var fbDialog = new mdc.dialog.MDCDialog(document.getElementsByClassName('mdc-dialog')[0]);
         fbDialog.open();
 
     }

@@ -1,0 +1,30 @@
+<html>
+<head>
+    <link href="../md/material-components-web.min.css" rel="stylesheet">
+    <script src="../md/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="../md/md-icon.css">
+</head>
+
+<body>
+
+    <div class="mdc-snackbar">
+        <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+            <div class="mdc-snackbar__label" aria-atomic="false">
+                Can't send photo. Retry in 5 seconds.
+            </div>
+            <div class="mdc-snackbar__actions" aria-atomic="true">
+                <button type="button" class="mdc-button mdc-snackbar__action">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Retry</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/md-snackbar.js"></script>
+    <script>
+        showSnackbar('Coming Soon!', 'OK');
+    </script>
+</body>
+
+</html>

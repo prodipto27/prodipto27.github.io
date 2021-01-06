@@ -1,21 +1,39 @@
-window.onhashchange = function () {
-    console.log(document.location.href);
+// window.onhashchange = function () {
+//     console.log(document.location.href);
+//     var url = new URL(document.location.href);
+//     var c = url.searchParams.get("page");
+//     console.log(c);
+//     if (c != null) {
+//         var ifrm = document.getElementById("ifrm");
+//         ifrm.src = "pages/" + c;
+//     }
+// }
+
+// var url = new URL(document.location.href);
+// var c = url.searchParams.get("page");
+// console.log(c);
+// if (c != null) {
+//     var ifrm = document.getElementById("ifrm");
+//     ifrm.src = "pages/" + c;
+// }
+
+setTimeout(function () {
     var url = new URL(document.location.href);
     var c = url.searchParams.get("page");
     console.log(c);
     if (c != null) {
-        var ifrm = document.getElementById("ifrm");
-        ifrm.src = "pages/" + c;
+        var items = document.getElementsByClassName('mdc-list-item');
+        for (var i = 0; i < items.length; i++) {
+            if (document.getElementsByClassName('mdc-list-item')[i].getAttribute('data-location').includes(c)) {
+                document.getElementsByClassName('mdc-list-item')[i].click();
+                setTimeout(function () {
+                    drawer.open = false;
+                }, 1000);
+                break;
+            }
+        }
     }
-}
-
-var url = new URL(document.location.href);
-var c = url.searchParams.get("page");
-console.log(c);
-if (c != null) {
-    var ifrm = document.getElementById("ifrm");
-    ifrm.src = "pages/" + c;
-}
+}, 1000);
 
 [].forEach.call(document.getElementsByClassName("mdc-list-item"), function (el) {
     el.addEventListener("click", function (e) {
