@@ -197,18 +197,18 @@
 			<nav class="mdc-list">
 				<!--<a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" tabindex="0">-->
 				<a class="mdc-list-item mdc-list-item--activated"
-					onclick='loadIframe("Online Class Credentials", "pages/credentials.html")' href="#"
+					onclick='loadIframe("Online Class Credentials", "pages/credentials.html")' data-location="?page=credentials.html" 
 					aria-current="page" tabindex="0">
 					<span class="mdc-list-item__ripple"></span>
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">vpn_key</i>
 					<span class="mdc-list-item__text">Online Class Credentials</span>
 				</a>
-				<a class="mdc-list-item" onclick='loadIframe("Class Routine", "pages/routine.html")' href="#">
+				<a class="mdc-list-item" onclick='loadIframe("Class Routine", "pages/routine.html")' data-location="?page=routine.html" >
 					<span class="mdc-list-item__ripple"></span>
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">event</i>
 					<span class="mdc-list-item__text">Class Routine</span>
 				</a>
-				<a class="mdc-list-item" onclick='loadIframe("Syllabus", "pages/syllabus.html")' href="#">
+				<a class="mdc-list-item" onclick='loadIframe("Syllabus", "pages/syllabus.html")' data-location="?page=syllabus.html" >
 					<span class="mdc-list-item__ripple"></span>
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
 					<span class="mdc-list-item__text">Syllabus</span>
@@ -238,6 +238,10 @@
 				<li id='install-menu' onclick="pwaInstall()" class="mdc-list-item" role="menuitem">
 					<span class="mdc-list-item__ripple"></span>
 					<span class="mdc-list-item__text">Install App</span>
+				</li>
+				<li id='install-menu' onclick="shareThisPage()" class="mdc-list-item" role="menuitem">
+					<span class="mdc-list-item__ripple"></span>
+					<span class="mdc-list-item__text">Share This Page</span>
 				</li>
 				<li onclick="hudai()" class="mdc-list-item" role="menuitem">
 					<span class="mdc-list-item__ripple"></span>
@@ -324,6 +328,8 @@
 	<script src="js/md-dialog.js"></script>
 	<script src="js/open-facebook-post.js"></script>
 	<script src="js/pwa-install.js"></script>
+	<script src="js/url-reslover.js"></script>
+	<script src="js/page-sharer.js"></script>
 
 	<script>
 		if (window.matchMedia('(display-mode: standalone)').matches == false) {
