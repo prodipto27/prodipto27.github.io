@@ -19,12 +19,25 @@
 <body>
     <br /><br /><br /><br /><br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button onclick="window.open('https://prodipto27.github.io/apk/Prodipto27.apk')" align="center"
+    <button onclick="downloadApk()" align="center"
         class="mdc-button mdc-button--raised">
         <div class="mdc-button__ripple"></div>
         <i class="material-icons mdc-button__icon" aria-hidden="true">system_update</i>
         <span class="mdc-button__label">Download Apk Version (2 MB)</span>
     </button>
+
+    <script>
+        function downloadApk() {
+            (async () => {
+                var response = await fetch('https://api.github.com/repos/prodipto27/prodipto27.github.io/releases');
+                var data = await response.json();
+                console.log(data[0].assets[0].browser_download_url);
+                window.open(data[0].assets[0].browser_download_url);
+
+            })()
+        }
+    </script>
+
 </body>
 
 </html>
