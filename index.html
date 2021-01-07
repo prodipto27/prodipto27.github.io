@@ -8,8 +8,8 @@
 	</link>
 	<script src="manup.min.js"></script>
 	<meta name="theme-color" content="#6200ee">
-	<meta content='#6200ee' name='msapplication-navbutton-color'/>
-	<meta content='#6200ee' name='apple-mobile-web-app-status-bar-style'/>
+	<meta content='#6200ee' name='msapplication-navbutton-color' />
+	<meta content='#6200ee' name='apple-mobile-web-app-status-bar-style' />
 	<link rel="icon" href="https://prodipto27.github.io/images/favicon.ico" type="image/ico" sizes="48x48">
 	<meta property="og:url" content="https://prodipto27.github.io" />
 	<meta property="og:type" content="website" />
@@ -179,8 +179,8 @@
 				<button id='install-button' onclick="pwaInstall()"
 					class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
 					aria-label="Favorite">favorite</button>
-				<button onclick="openCornerMenu()"
-					class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">
+				<button onclick="openCornerMenu()" class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+					aria-label="Options">
 
 					more_vert
 				</button>
@@ -197,31 +197,42 @@
 			<nav class="mdc-list">
 				<!--<a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" tabindex="0">-->
 				<a class="mdc-list-item mdc-list-item--activated"
-					onclick='loadIframe("Online Class Credentials", "pages/credentials.html")' data-location="?page=credentials.html" 
-					aria-current="page" tabindex="0">
+					onclick='loadIframe("Online Class Credentials", "pages/credentials.html")'
+					data-location="?page=credentials.html" aria-current="page" tabindex="0">
 					<span class="mdc-list-item__ripple"></span>
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">vpn_key</i>
 					<span class="mdc-list-item__text">Online Class Credentials</span>
 				</a>
-				<a class="mdc-list-item" onclick='loadIframe("Class Routine", "pages/routine.html")' data-location="?page=routine.html" >
+				<a class="mdc-list-item" onclick='loadIframe("Class Routine", "pages/routine.html")'
+					data-location="?page=routine.html">
 					<span class="mdc-list-item__ripple"></span>
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">event</i>
 					<span class="mdc-list-item__text">Class Routine</span>
 				</a>
-				<a class="mdc-list-item" onclick='loadIframe("Syllabus", "pages/syllabus.html")' data-location="?page=syllabus.html" >
+				<a class="mdc-list-item" onclick='loadIframe("Syllabus", "pages/syllabus.html")'
+					data-location="?page=syllabus.html">
 					<span class="mdc-list-item__ripple"></span>
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
 					<span class="mdc-list-item__text">Syllabus</span>
 				</a>
-				<a class="mdc-list-item" onclick='loadIframe("Books", "pages/books.html")' data-location="?page=books.html">
+				<a class="mdc-list-item" onclick='loadIframe("Books", "pages/books.html")'
+					data-location="?page=books.html">
 					<span class="mdc-list-item__ripple"></span>
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">menu_book</i>
 					<span class="mdc-list-item__text">Books</span>
 				</a>
-				<a class="mdc-list-item" onclick='loadIframe("Recorded Classes", "pages/recorded_class.html")' data-location="?page=recorded_class.html">
+				<a class="mdc-list-item" onclick='loadIframe("Recorded Classes", "pages/recorded_class.html")'
+					data-location="?page=recorded_class.html">
 					<span class="mdc-list-item__ripple"></span>
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">video_library</i>
 					<span class="mdc-list-item__text">Recorded Classes</span>
+				</a>
+				<hr class="mdc-list-divider">
+				<a class="mdc-list-item" onclick='loadIframe("Provide Feedback", "pages/feedback.html")'
+					data-location="?page=feedback.html">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">feedback</i>
+					<span class="mdc-list-item__text">Feedback</span>
 				</a>
 			</nav>
 		</div>
@@ -237,14 +248,22 @@
 			<ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
 				<li id='install-menu' onclick="pwaInstall()" class="mdc-list-item" role="menuitem">
 					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">system_update</i>
 					<span class="mdc-list-item__text">Install App</span>
 				</li>
 				<li id='install-menu' onclick="shareThisPage()" class="mdc-list-item" role="menuitem">
 					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">share</i>
 					<span class="mdc-list-item__text">Share This Page</span>
+				</li>
+				<li onclick="clearCache()" class="mdc-list-item" role="menuitem">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">delete_sweep</i>
+					<span class="mdc-list-item__text">Clear Cache Data</span>
 				</li>
 				<li onclick="hudai()" class="mdc-list-item" role="menuitem">
 					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">psychology</i>
 					<span class="mdc-list-item__text">হুদাই!</span>
 				</li>
 			</ul>
@@ -308,7 +327,7 @@
 
 	<script>
 		if (window.matchMedia('(display-mode: standalone)').matches == false) {
-			setTimeout(function(){
+			setTimeout(function () {
 				showSnackbar("To install the app on device, tap on the heart icon above!", 'OK');
 			}, 6000);
 		}
@@ -320,6 +339,19 @@
 		document.getElementById('dialog-cancel').addEventListener('click', (e) => {
 			document.getElementsByClassName("mdc-dialog__button")[1].id = 'pwa-install-accept';
 		});
+
+		function clearCache() {
+			showSnackbar("Clearning cache data...", "OK")
+			if ('serviceWorker' in navigator) {
+				caches.keys().then(function (cacheNames) {
+					cacheNames.forEach(function (cacheName) {
+						caches.delete(cacheName);
+					});
+				});
+			}
+
+			showSnackbar("Cached data was cleared!", "OK");
+		}
 	</script>
 
 </body>
