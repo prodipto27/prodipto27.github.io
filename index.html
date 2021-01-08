@@ -354,10 +354,37 @@
 						caches.delete(cacheName);
 					});
 				});
+				showSnackbar("Cached data was cleared!", "OK");
+			} else {
+				showSnackbar("Clearing cache wasn't possible.", "OK");
 			}
 
-			showSnackbar("Cached data was cleared!", "OK");
+
 		}
+
+
+		var eventMethod = window.addEventListener
+			? "addEventListener"
+			: "attachEvent";
+		var eventer = window[eventMethod];
+		var messageEvent = eventMethod === "attachEvent"
+			? "onmessage"
+			: "message";
+
+		eventer(messageEvent, function (e) {
+			// if (e.origin !== 'http://the-trusted-iframe-origin.com') return;
+			if (e.data === "changeTitle" || e.message === "changeTitle") {
+				document.getElementsByClassName("mdc-top-app-bar__title")[0].textContent = document.getElementById("ifrm").contentWindow.document.title;
+			}
+			else if (e.data.includes("showSnack | ")) {
+				var str = e.data;
+				str = str.replace("showSnack | ", "");
+				showSnackbar(str, "ঠিকাছে");
+			}
+
+		});
+
+
 	</script>
 
 </body>

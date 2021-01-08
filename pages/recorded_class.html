@@ -1,14 +1,20 @@
 <html>
 
 <head>
+    <title>Recorded Classes</title>
     <link href="../md/material-components-web.min.css" rel="stylesheet">
     <script src="../md/material-components-web.min.js"></script>
     <link rel="stylesheet" href="../md/md-icon.css">
 </head>
 
 <body>
-    
-    <div class="mdc-snackbar">
+
+    <br/><br/><br/><br/>
+    <h3>
+        গোগনীয়তার খাতিরে ভিডিও প্লেলিস্টগুলোর লিংক এখানে না দিয়ে লিংক সম্বলিত ফেসবুক পোস্টে তোমাকে নিয়ে যাওয়া হচ্ছে।
+    </h3>
+
+    <!-- <div class="mdc-snackbar">
 		<div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
 			<div class="mdc-snackbar__label" aria-atomic="false">
 				Can't send photo. Retry in 5 seconds.
@@ -20,7 +26,7 @@
 				</button>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
     <!--Facebook Link Share-->
     <div class="mdc-dialog">
@@ -46,8 +52,15 @@
         </div>
         <div class="mdc-dialog__scrim"></div>
     </div>
+    <script>
+        parent.postMessage("changeTitle", "*");
+        function showSnackbar(str) {
+            parent.postMessage("showSnack | " + str, "*");
+            console.log(str);
+        }
+    </script>
 
-    <script src="../js/md-snackbar.js"></script>
+    <!-- <script src="../js/md-snackbar.js"></script> -->
     <script src="../js/open-facebook-post.js"></script>
     <script>
         openFbPost();

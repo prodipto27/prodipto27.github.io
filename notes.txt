@@ -1,0 +1,40 @@
+// var eventMethod = window.addEventListener
+		// 	? "addEventListener"
+		// 	: "attachEvent";
+		// var eventer = window[eventMethod];
+		// var messageEvent = eventMethod === "attachEvent"
+		// 	? "onmessage"
+		// 	: "message";
+
+		// eventer(messageEvent, function (e) {
+		// 	// if (e.origin !== 'http://the-trusted-iframe-origin.com') return;
+		// 	if (e.data === "changeTitle" || e.message === "changeTitle") {
+		// 		document.getElementsByClassName("mdc-top-app-bar__title")[0].textContent = document.getElementById("ifrm").contentWindow.document.title;
+		// 	}
+			// else if(e.data.includes("showSnack | ")){
+			// 	var str = e.data;
+			// 	str = str.replace("showSnack | ", "");
+			// 	showSnackbar(str, "OK");
+			// }
+
+		//});
+
+
+
+
+
+
+        function showSnack(str){
+            parent.postMessage("showSnack | " + str, "*");
+            console.log(str);
+        }
+
+
+        function openBook(filename, i) {
+            showSnack('সংগ্রহে - ' + credits[i]);
+            setTimeout(function () {
+                window.open(encodeURI("../pdfviewer/web/viewer.html?file=../../books/" + filename), "_blank");
+            }, 2000);
+        }
+
+        parent.postMessage("changeTitle", "*");
