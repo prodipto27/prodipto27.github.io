@@ -30,3 +30,5 @@ function hudai(){
     console.log('sounds/' + meme_sounds[index]);
     audio.play();
 }
+
+//console.log("HI");

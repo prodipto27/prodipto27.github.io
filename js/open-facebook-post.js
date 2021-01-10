@@ -1,7 +1,7 @@
 // var fbPostClickListener = function(e){
-//     showSnackbar("Opening Facebook Post...", "OK");
+//     showSnackbar("Redirecting to Facebook...", "OK");
 // setTimeout(function () {
-//     console.log("Opening Facebook Post...");
+//     console.log("Redirecting to Facebook...");
 //     window.open("https://www.facebook.com/groups/IST.CSE27th/permalink/613081512739482", "_blank");
 // }, 2000);
 // }
@@ -36,52 +36,126 @@
 
 var link = "www.facebook.com/groups/IST.CSE27th/permalink/613081512739482/";
 
-function openFbPost() {
+function openFbPost(link) {
+
+
+    var old_element = document.getElementsByClassName("mdc-dialog")[0];
+    var new_element = old_element.cloneNode(true);
+    old_element.remove();
+    document.body.prepend(new_element);
+
+
 
     var ua = navigator.userAgent.toLowerCase();
     var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
 
     if (isAndroid) {
-        var fbDialog = new mdc.dialog.MDCDialog(document.getElementsByClassName('mdc-dialog')[0]);
-        fbDialog.open();
+
+        if (link.includes("messenger")) {
+            var mfbDialog = new mdc.dialog.MDCDialog(document.getElementById('messenger'));
+            mfbDialog.open();
+
+            document.getElementById("mapp").addEventListener('click', (e) => {
+                showSnackbar("Redirecting to Facebook...", "OK");
+
+                setTimeout(function () {
+                    console.log("Redirecting to Facebook...");
+                    document.location = "intent://" + link + "#Intent;package=com.facebook.orca;scheme=https;end";
+                }, 2000);
+
+                setTimeout(function () {
+                    showSnackbar("ফেসবুক অ্যাপ ওপেন হয়েছে কি? না হয়ে থাকলে পরের বার ব্রাউজার সিলেক্ট করুন।", "ঠিকাছে")
+                }, 6000);
+            });
+
+            document.getElementById("mapplite").addEventListener('click', (e) => {
+                showSnackbar("Redirecting to Facebook...", "OK");
+                setTimeout(function () {
+                    console.log("Redirecting to Facebook...");
+                    document.location = "intent://" + link + "#Intent;package=com.facebook.mlite;scheme=https;end";
+                }, 2000);
+
+                setTimeout(function () {
+                    showSnackbar("ফেসবুক লাইট অ্যাপ ওপেন হয়েছে কি? না হয়ে থাকলে পরের বার ব্রাউজার সিলেক্ট করুন।", "ঠিকাছে")
+                }, 6000);
+            });
+            
+            document.getElementById("mfbapp").addEventListener('click', (e) => {
+                showSnackbar("Redirecting to Facebook...", "OK");
+
+                setTimeout(function () {
+                    console.log("Redirecting to Facebook...");
+                    document.location = "intent://" + link + "#Intent;package=com.facebook.katana;scheme=https;end";
+                }, 2000);
+
+                setTimeout(function () {
+                    showSnackbar("ফেসবুক অ্যাপ ওপেন হয়েছে কি? না হয়ে থাকলে পরের বার ব্রাউজার সিলেক্ট করুন।", "ঠিকাছে")
+                }, 6000);
+            });
+
+            document.getElementById("mfbapplite").addEventListener('click', (e) => {
+                showSnackbar("Redirecting to Facebook...", "OK");
+                setTimeout(function () {
+                    console.log("Redirecting to Facebook...");
+                    document.location = "intent://" + link + "#Intent;package=com.facebook.lite;scheme=https;end";
+                }, 2000);
+
+                setTimeout(function () {
+                    showSnackbar("ফেসবুক লাইট অ্যাপ ওপেন হয়েছে কি? না হয়ে থাকলে পরের বার ব্রাউজার সিলেক্ট করুন।", "ঠিকাছে")
+                }, 6000);
+            });
+
+            document.getElementById("fbbrowser").addEventListener('click', (e) => {
+                showSnackbar("Redirecting to Facebook...", "OK");
+                setTimeout(function () {
+                    window.open("https://" + link, "_blank");
+                }, 2000);
+            });
+        }
+        else {
+            var fbDialog = new mdc.dialog.MDCDialog(document.getElementsByClassName('mdc-dialog')[0]);
+            fbDialog.open();
+
+            document.getElementById("fbapp").addEventListener('click', (e) => {
+                showSnackbar("Redirecting to Facebook...", "OK");
+
+                setTimeout(function () {
+                    console.log("Redirecting to Facebook...");
+                    document.location = "intent://" + link + "#Intent;package=com.facebook.katana;scheme=https;end";
+                }, 2000);
+
+                setTimeout(function () {
+                    showSnackbar("ফেসবুক অ্যাপ ওপেন হয়েছে কি? না হয়ে থাকলে পরের বার ব্রাউজার সিলেক্ট করুন।", "ঠিকাছে")
+                }, 6000);
+            });
+
+            document.getElementById("fbapplite").addEventListener('click', (e) => {
+                showSnackbar("Redirecting to Facebook...", "OK");
+                setTimeout(function () {
+                    console.log("Redirecting to Facebook...");
+                    document.location = "intent://" + link + "#Intent;package=com.facebook.lite;scheme=https;end";
+                }, 2000);
+
+                setTimeout(function () {
+                    showSnackbar("ফেসবুক লাইট অ্যাপ ওপেন হয়েছে কি? না হয়ে থাকলে পরের বার ব্রাউজার সিলেক্ট করুন।", "ঠিকাছে")
+                }, 6000);
+            });
+
+            document.getElementById("fbbrowser").addEventListener('click', (e) => {
+                showSnackbar("Redirecting to Facebook...", "OK");
+                setTimeout(function () {
+                    window.open("https://" + link, "_blank");
+                }, 2000);
+            });
+        }
+
 
     }
     else {
-        showSnackbar("Opening Facebook Post...", "OK");
+        showSnackbar("Redirecting to Facebook...", "OK");
         setTimeout(function () {
             window.open("https://" + link, "_blank");
         }, 2000);
     }
 }
 
-document.getElementById("fbapp").addEventListener('click', (e) => {
-    showSnackbar("Opening Facebook Post...", "OK");
-
-    setTimeout(function () {
-        console.log("Opening Facebook Post...");
-        document.location = "intent://" + link + "#Intent;package=com.facebook.katana;scheme=https;end";
-    }, 2000);
-
-    setTimeout(function () {
-        showSnackbar("ফেসবুক অ্যাপ ওপেন হয়েছে কি? না হয়ে থাকলে পরের বার ব্রাউজার সিলেক্ট করুন।", "ঠিকাছে")
-    }, 6000);
-});
-
-document.getElementById("fbapplite").addEventListener('click', (e) => {
-    showSnackbar("Opening Facebook Post...", "OK");
-    setTimeout(function () {
-        console.log("Opening Facebook Post...");
-        document.location = "intent://" + link + "#Intent;package=com.facebook.lite;scheme=https;end";
-    }, 2000);
-
-    setTimeout(function () {
-        showSnackbar("ফেসবুক লাইট অ্যাপ ওপেন হয়েছে কি? না হয়ে থাকলে পরের বার ব্রাউজার সিলেক্ট করুন।", "ঠিকাছে")
-    }, 6000);
-});
-
-document.getElementById("fbbrowser").addEventListener('click', (e) => {
-    showSnackbar("Opening Facebook Post...", "OK");
-    setTimeout(function () {
-        window.open("https://" + link, "_blank");
-    }, 2000);
-});
