@@ -53,6 +53,16 @@
 			width: 100vw;
 			height: 100vh;
 		}
+
+		#swal2-title {
+			font-size: 1.2em;
+		}
+
+		#swal2-content {
+			text-align: left;
+			padding: 1em;
+		}
+
 	</style>
 
 	<script>
@@ -120,7 +130,7 @@
 			menu.open = true;
 		}
 	</script>
-	<!--<script>
+	<script>
 		function hideBanner() {
 			document.getElementById("app-banner").style.display = "none";
 		}
@@ -163,7 +173,7 @@
 				});
 			});
 		});
-	</script>-->
+	</script>
 
 	<!-- <script>
 		
@@ -230,6 +240,12 @@
 					<span class="mdc-list-item__ripple"></span>
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">video_library</i>
 					<span class="mdc-list-item__text">Recorded Classes</span>
+				</a>
+				<a class="mdc-list-item" onclick='loadIframe("Recorded Classes", "pages/google_classroom.html")'
+					data-location="?page=recorded_class.html">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">school</i>
+					<span class="mdc-list-item__text">Join Google Classroom</span>
 				</a>
 				<hr class="mdc-list-divider">
 				<a class="mdc-list-item" onclick='loadIframe("Download Apk Version", "pages/download-app-apk.html")'
@@ -393,7 +409,10 @@
 
 
 	</script>
-
+	
+	<script src="js/sweetalert2@10.js"></script>
+	<script src="js/check_version_change.js"></script>
+	
 </body>
 
 </html>
