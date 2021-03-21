@@ -1,4 +1,4 @@
 {
-    "version": "prodipto27-v0.5",
-    "changes": "Removed publicly exposed creds.js file.\nAdded Google Classroom menu.\nChanged Lutfi Maam's online class credentials.\nAdded version log system."
+    "version": "prodipto27-v0.5.1",
+    "changes": "Changed lutfi maam's class time."
 }
