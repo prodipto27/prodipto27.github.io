@@ -35,22 +35,22 @@
 
       function encrypt() {
           console.log("encrypt");
-          var inputText = document.getElementById("input").textContent;
+          var inputText = document.getElementById("input").value;
           var pass = document.getElementById("password").value;
 
           var encryptedText = code.encryptMessage(inputText, pass);
 
-          document.getElementById("output").textContent = encryptedText;
+          document.getElementById("output").value = encryptedText;
       }
 
       function decrypt() {
         console.log("decrypt");
-          var inputText = document.getElementById("input").textContent;
+          var inputText = document.getElementById("input").value;
           var pass = document.getElementById("password").value;
 
           var decryptedText = code.decryptMessage(inputText, pass);
 
-          document.getElementById("output").textContent = decryptedText;
+          document.getElementById("output").value = decryptedText;
       }
     </script>
   </body>
