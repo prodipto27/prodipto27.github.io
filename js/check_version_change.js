@@ -26,7 +26,7 @@ function postWorker(){
             html_string += "</ol>";
 
             Swal.fire({
-                title: 'Prodipto27 ' + version + ' release',
+                title: version + ' release',
                 icon: 'info',
                 html: html_string
             });
