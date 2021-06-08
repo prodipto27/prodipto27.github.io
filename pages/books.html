@@ -5,6 +5,7 @@
     <link href="../md/material-components-web.min.css" rel="stylesheet">
     <script src="../md/material-components-web.min.js"></script>
     <link rel="stylesheet" href="../md/md-icon.css">
+    <!--<link rel="stylesheet" href="../css/booklist.css">-->
 </head>
 
 <body>
@@ -25,11 +26,10 @@
 
     <script src="../js/md-snackbar.js"></script> -->
     <br/><br/><br/>
-    <ul class="mdc-list mdc-list--two-line">
 
-    </ul>
+    <div id="data"></div>
     <script src="../books/book-list.js"></script>
-    <script src="../js/book-list-generator.js"></script>
+    
 
     <script>
         function showSnack(str){
@@ -37,14 +37,20 @@
             console.log(str);
         }
 
-        function openBook(filename, i) {
-            showSnack('সংগ্রহে - ' + credits[i]);
-            setTimeout(function () {
-                window.open(encodeURI("../pdfviewer/web/viewer.html?file=../../books/" + filename), "_blank");
-            }, 2000);
+        function openBook(filepath, credit) {
+            if(filepath.includes("UNAVAILABLE")){
+                showSnack("বইটি বর্তমানে আপলোড করা নেই!");
+            }
+            else{
+                showSnack('সংগ্রহে - ' + credit);
+                setTimeout(function () {
+                    window.open(encodeURI("../pdfviewer/web/viewer.html?file=../../books/" + filepath), "_blank");
+                }, 2000);
+            }
         }
         parent.postMessage("changeTitle", "*");
     </script>
+    <script src="../js/book-list-generator.js"></script>
 
 </body>
 

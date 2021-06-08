@@ -1,15 +1,116 @@
 {
-    "1st Semester": {
-        "name": "BOOKNAME",
-        "subject": "SUBJECTNAME",
-        "edition": "Edition",
-        "link": "LINK"
-    },
+    "1st Semester": [
+        {
+            "Structured Programming Language": [
+                {
+                    "name": "Programming in ANSI C - Balagurusamy",
+                    "edition": "7th",
+                    "collection_credit": "UNAVAILABLE",
+                    "filename": "UNAVAILABLE"
+                }
+            ],
+            "Electrical and Electronic Circuit": [
+                {
+                    "name": "A Textbook of  Electrical Technology",
+                    "edition": "7th",
+                    "collection_credit": "UNAVAILABLE",
+                    "filename": "UNAVAILABLE"
+                },
+                {
+                    "name": "Electronic Devices and Circuit Theory",
+                    "edition": "7th",
+                    "collection_credit": "UNAVAILABLE",
+                    "filename": "UNAVAILABLE"
+                },
+                {
+                    "name": "Introductory Circuit Analysis",
+                    "edition": "13th",
+                    "collection_credit": "Rakib Md Osman Faruque",
+                    "filename": "Introductory-Circuit-Analysis 13th edition global edition.pdf"
+                },
+                {
+                    "name": "Introductory Circuit Analysis",
+                    "edition": "10th",
+                    "collection_credit": "Rakib Md Osman Faruque",
+                    "filename": "Robert-L.-Boylestad-Introductory-Circuit-Analysis-10th edition.pdf"
+                }
+            ],
+            "Calculus": [
+                {
+                    "name": "Differential Calculus",
+                    "edition": "7th",
+                    "collection_credit": "Rakib Md Osman Faruque",
+                    "filename": "UNAVAILABLE"
+                },
+                {
+                    "name": "Integral Calculus",
+                    "edition": "7th",
+                    "collection_credit": "Rakib Md Osman Faruque",
+                    "filename": "UNAVAILABLE"
+                }
+            ],
+            "Physics": [
+                {
+                    "name": "Physics Part-II",
+                    "edition": "7th",
+                    "collection_credit": "Rakib Md Osman Faruque",
+                    "filename": "UNAVAILABLE"
+                }
 
-    "2nd Semester": {
-        "name": "BOOKNAME",
-        "subject": "SUBJECTNAME",
-        "edition": "Edition",
-        "link": "LINK"
-    }
+            ],
+            "English": [
+                {
+                    "name": "Advanced Learners’ Degree General English",
+                    "edition": "7th",
+                    "collection_credit": "Rakib Md Osman Faruque",
+                    "filename": "UNAVAILABLE"
+                }
+            ]
+        }
+    ],
+
+    "2nd Semester": [
+        {
+            "Digital Systems Design": [
+                {
+                    "name": "Digital Systems Principles And Applications - Ronald Tocci - 10th Edition",
+                    "edition": "10th",
+                    "collection_credit": "Shakil Mahmud Sumon",
+                    "filename": "Digital Systems Principles And Applications - Ronald Tocci - 10th Edition.pdf"                    
+                }
+            ],
+            "Discrete Mathematics": [
+                {
+                    "name": "Discrete Mathematics and Its Applications - Kenneth Rosen - 7th Edition.pdf",
+                    "edition": "7th",
+                    "collection_credit": "Md. Sarwar Jahan Sabit",
+                    "filename": "Discrete Mathematics and Its Applications - Kenneth Rosen - 7th Edition.pdf"             
+                }
+            ],
+            "Linear Algebra": [
+                {
+                    "name": "Linear Algebra,",
+                    "edition": "10th",
+                    "collection_credit": "Tasin Mahmud",
+                    "filename": "Linear Algebra | Theory of Matrices - by Md Abdur Rahman.pdf"           
+                }
+            ],
+            "Statistics and Probability": [
+                {
+                    "name": "An Introduction to Statistics",
+                    "edition": "10th",
+                    "collection_credit": "Tasin Mahmud",
+                    "filename": "UNAVAILABLE"           
+                }
+            ],
+            "History of the Emergence of Independent Bangladesh": [
+                {
+                    "name": "History of  the Emergence of  Independent Bangladesh",
+                    "edition": "10th",
+                    "collection_credit": "Tasin Mahmud",
+                    "filename": "UNAVAILABLE"           
+                }
+            ]
+        }
+    ]
 }
