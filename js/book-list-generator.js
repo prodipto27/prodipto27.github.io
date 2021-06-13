@@ -9,6 +9,15 @@ listHTMLTemplateStop = '</ul>';
 divStart = "<div style='margin-left: 30px;'>";
 divStop = "</div>";
 
+var booksPath = siteHome + "/books"
+
+function returnDownloadPath(bookPath){
+    if(bookPath.includes("UNAVAILABLE")){
+        return "#";
+    }
+    return booksPath + "/" + bookPath;
+}
+
 function generateBookList(jsondata) {
     var mainHtmlData = '';
     for(var semester in jsondata){
@@ -33,7 +42,7 @@ function generateBookList(jsondata) {
                     iconName = "import_contacts";
                 }
 
-                listHtmlString = '<li ' + colorHTML + ' onclick="openBook(\'' + bookList[book]["filename"] + '\', \'' + bookList[book]["collection_credit"] + '\')" class="mdc-list-item" ' + ((i == 0) ? 'tabindex="0"' : '') + '><span class="mdc-list-item__ripple"></span><i ' + colorHTML + ' class="material-icons mdc-list-item__graphic" aria-hidden="true">' + iconName + '</i><span class="mdc-list-item__text"><span class="mdc-list-item__primary-text">' + bookList[book]["name"] + '</span><span class="mdc-list-item__secondary-text">' + bookList[book]["edition"] + " Edition" + '</span></span></li>';
+                listHtmlString = '<li ' + colorHTML + ' onclick="openBook(\'' + bookList[book]["filename"] + '\', \'' + bookList[book]["collection_credit"] + '\')" class="mdc-list-item" ' + ((i == 0) ? 'tabindex="0"' : '') + '><span class="mdc-list-item__ripple"></span><i ' + colorHTML + ' class="material-icons mdc-list-item__graphic" aria-hidden="true">' + iconName + '</i><span class="mdc-list-item__text"><span class="mdc-list-item__primary-text">' + bookList[book]["name"] + '</span><span class="mdc-list-item__secondary-text">' + bookList[book]["edition"] + " Edition" + '</span></span><span style="position: absolute;float: right;right: 0px;"><a style="color: inherit;" href="' + returnDownloadPath(bookList[book]["filename"]) + '"><i class="material-icons">download</i></a></span></span></li>';
                 
                 mainHtmlData += listHtmlString;
                 i++;
