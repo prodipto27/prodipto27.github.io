@@ -248,6 +248,12 @@
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">school</i>
 					<span class="mdc-list-item__text">Join Google Classroom</span>
 				</a>
+				<a class="mdc-list-item" onclick='loadIframe("Settings", "pages/settings.html")'
+					data-location="?page=settings.html">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">settings</i>
+					<span class="mdc-list-item__text">Settings</span>
+				</a>
 				<hr class="mdc-list-divider">
 				<a class="mdc-list-item" onclick='loadIframe("Download Apk Version", "pages/download-app-apk.html")'
 					data-location="?page=download-app-apk.html">
@@ -299,9 +305,19 @@
 
 	<div class="container">
 		<iframe style="border-width: 0px;" id="ifrm" allow="fullscreen" class="responsive-iframe"
-			src="pages/routine.html"></iframe>
+			src="pages/credentials.html"></iframe>
 
 	</div>
+
+	<script>
+		if(localStorage.getItem("defaultPage") == null){
+			localStorage.setItem("defaultPage", "pages/credentials.html");
+		} 
+		else{
+			document.getElementById('ifrm').src = localStorage.getItem("defaultPage");
+		}
+	</script>
+
 	<script src="js/iframe-loader.js"></script>
 
 	<div class="mdc-snackbar">
