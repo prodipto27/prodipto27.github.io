@@ -314,7 +314,7 @@
 			localStorage.setItem("defaultPage", "pages/credentials.html");
 		} 
 		else{
-			document.getElementById('ifrm').src = localStorage.getItem("defaultPage");
+			document.getElementById('ifrm').setAttribute("src", localStorage.getItem("defaultPage"));
 		}
 	</script>
 
