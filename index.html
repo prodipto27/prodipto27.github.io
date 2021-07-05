@@ -210,14 +210,15 @@
 		<div class="mdc-drawer__content">
 			<nav class="mdc-list">
 				<!--<a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" tabindex="0">-->
-				<a class="mdc-list-item mdc-list-item--activated"
+				<a class="mdc-list-item"
 					onclick='loadIframe("Online Class Credentials", "pages/credentials.html")'
 					data-location="?page=credentials.html" aria-current="page" tabindex="0">
 					<span class="mdc-list-item__ripple"></span>
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">vpn_key</i>
 					<span class="mdc-list-item__text">Online Class Credentials</span>
 				</a>
-				<a class="mdc-list-item" onclick='loadIframe("Class Routine", "pages/routine.html")'
+				<a class="mdc-list-item mdc-list-item--activated"
+					onclick='loadIframe("Class Routine", "pages/routine.html")'
 					data-location="?page=routine.html">
 					<span class="mdc-list-item__ripple"></span>
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">event</i>
@@ -298,7 +299,7 @@
 
 	<div class="container">
 		<iframe style="border-width: 0px;" id="ifrm" allow="fullscreen" class="responsive-iframe"
-			src="pages/credentials.html"></iframe>
+			src="pages/routine.html"></iframe>
 
 	</div>
 	<script src="js/iframe-loader.js"></script>
