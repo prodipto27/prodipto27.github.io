@@ -57,7 +57,7 @@
     <div style="display: flex;">
         <h3>Select Default Page:</h3>
         <div style="display: flex; padding-left: 30px;" class="dropdown">
-            <button onmouseover="showOptions()" class="dropbtn">Select</button>
+            <button onclick="showOptions()" class="dropbtn">Select</button>
             <div onmouseleave='document.getElementsByClassName("dropdown-content")[0].style.display = "none";' class="dropdown-content">
                 <a onclick="addDefaultPage(event)" href="#" data-location="pages/credentials.html">Online Class Credentials</a>
                 <a onclick="addDefaultPage(event)" href="#" data-location="pages/routine.html">Routine</a>
