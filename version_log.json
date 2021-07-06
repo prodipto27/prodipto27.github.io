@@ -1,4 +1,4 @@
 {
-  "version": "prodipto27-v0.6.1",
+  "version": "prodipto27-v0.6.3",
   "changes": "Added Settings Page. Added Default Page Option.\nCritical Bug Fix for iframe [NS_BINDING_ABORTED]"
 }
