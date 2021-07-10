@@ -26,7 +26,7 @@
 
     <script src="../js/md-snackbar.js"></script> -->
     <br/><br/><br/>
-
+    <h3>এগুলো ছাড়াও অন্যান্য বই পেতে Other Resources সেকশনটি চেক করো</h3>
     <div id="data"></div>
     <script src="../books/book-list.js"></script>
     
@@ -37,14 +37,14 @@
             console.log(str);
         }
 
-        function openBook(filepath, credit) {
-            if(filepath.includes("UNAVAILABLE")){
+        function openBook(url, credit) {
+            if(url.includes("UNAVAILABLE")){
                 showSnack("বইটি বর্তমানে আপলোড করা নেই!");
             }
             else{
                 showSnack('সংগ্রহে - ' + credit);
                 setTimeout(function () {
-                    window.open(encodeURI("../pdfviewer/web/viewer.html?file=../../books/" + filepath), "_blank");
+                    window.open(encodeURI(url), "_blank");
                 }, 2000);
             }
         }

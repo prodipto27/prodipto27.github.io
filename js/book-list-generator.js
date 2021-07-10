@@ -33,7 +33,7 @@ function generateBookList(jsondata) {
             var i = 0;
             for(var book in bookList){
                 //console.log(bookList[book]["name"]);
-                if(bookList[book]["filename"].includes("UNAVAILABLE")){
+                if(bookList[book]["url"].includes("UNAVAILABLE")){
                     colorHTML = 'style="color: red;"';
                     iconName = "report_problem";
                 }
@@ -42,7 +42,7 @@ function generateBookList(jsondata) {
                     iconName = "import_contacts";
                 }
 
-                listHtmlString = '<li ' + colorHTML + ' onclick="openBook(\'' + bookList[book]["filename"] + '\', \'' + bookList[book]["collection_credit"] + '\')" class="mdc-list-item" ' + ((i == 0) ? 'tabindex="0"' : '') + '><span class="mdc-list-item__ripple"></span><i ' + colorHTML + ' class="material-icons mdc-list-item__graphic" aria-hidden="true">' + iconName + '</i><span class="mdc-list-item__text"><span class="mdc-list-item__primary-text">' + bookList[book]["name"] + '</span><span class="mdc-list-item__secondary-text">' + bookList[book]["edition"] + " Edition" + '</span></span><span style="position: absolute;float: right;right: 0px;"><a style="color: inherit;" href="' + returnDownloadPath(bookList[book]["filename"]) + '"><i class="material-icons">download</i></a></span></span></li>';
+                listHtmlString = '<li ' + colorHTML + ' onclick="openBook(\'' + bookList[book]["url"] + '\', \'' + bookList[book]["collection_credit"] + '\')" class="mdc-list-item" ' + ((i == 0) ? 'tabindex="0"' : '') + '><span class="mdc-list-item__ripple"></span><i ' + colorHTML + ' class="material-icons mdc-list-item__graphic" aria-hidden="true">' + iconName + '</i><span class="mdc-list-item__text"><span class="mdc-list-item__primary-text">' + bookList[book]["name"] + '</span><span class="mdc-list-item__secondary-text">' + bookList[book]["edition"] + " Edition" + '</span></span><span style="position: absolute;float: right;right: 0px;"><a style="color: inherit;"><i class="material-icons">download</i></a></span></span></li>';
                 
                 mainHtmlData += listHtmlString;
                 i++;

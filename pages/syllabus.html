@@ -10,27 +10,27 @@
 <body>
   <br /><br /><br />
   <ul class="mdc-list">
-    <li onclick="openSyllabus('1st_year.pdf')" class="mdc-list-item" tabindex="0">
+    <li onclick="openSyllabus('https://drive.google.com/file/d/16md80i3eFpU0WKKH_OgKadgjJPhzlHgg/view?usp=sharing')" class="mdc-list-item" tabindex="0">
       <span class="mdc-list-item__ripple"></span>
       <i class="material-icons mdc-list-item__graphic" aria-hidden="true">looks_one</i>
       <span class="mdc-list-item__text">1st Year</span>
     </li>
-    <li onclick="openSyllabus('2nd_year.pdf')" class="mdc-list-item">
+    <li onclick="openSyllabus('https://drive.google.com/file/d/1MT9e2osiCgEEBl2AHhjCZUSGoGZ3odcc/view?usp=sharing')" class="mdc-list-item">
       <span class="mdc-list-item__ripple"></span>
       <i class="material-icons mdc-list-item__graphic" aria-hidden="true">looks_two</i>
       <span class="mdc-list-item__text">2nd Year</span>
     </li>
-    <li onclick="openSyllabus('3rd_year.pdf')" class="mdc-list-item">
+    <li onclick="openSyllabus('https://drive.google.com/file/d/18hETzuh71VAM83RwxVzLql0bm07UvIvN/view?usp=sharing')" class="mdc-list-item">
       <span class="mdc-list-item__ripple"></span>
       <i class="material-icons mdc-list-item__graphic" aria-hidden="true">looks_3</i>
       <span class="mdc-list-item__text">3rd Year</span>
     </li>
-    <li onclick="openSyllabus('4th_year.pdf')" class="mdc-list-item">
+    <li onclick="openSyllabus('https://drive.google.com/file/d/1jRaIiv_CuZ7wnNEO5ojo4PPep0xfdATm/view?usp=sharing')" class="mdc-list-item">
       <span class="mdc-list-item__ripple"></span>
       <i class="material-icons mdc-list-item__graphic" aria-hidden="true">looks_4</i>
       <span class="mdc-list-item__text">4th Year</span>
     </li>
-    <li onclick="window.open('../syllabus/Computer Science and Engineering, CSE (Hon\'s) Syllabus 2017-2018.zip')"
+    <li onclick="window.open('https://drive.google.com/file/d/1ZUNgMX2UxVAMgnphpSWIGhFxcKDrakEc/view?usp=sharing')"
       class="mdc-list-item">
       <span class="mdc-list-item__ripple"></span>
       <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inventory_2</i>
@@ -61,10 +61,10 @@
       console.log(str);
     }
 
-    function openSyllabus(filename) {
+    function openSyllabus(url) {
       showSnack('ফাইল ওপেন হচ্ছে...');
       setTimeout(function () {
-        window.open(encodeURI("../pdfviewer/web/viewer.html?file=../../syllabus/" + filename), "_blank")
+        window.open(encodeURI(url), "_blank")
       }, 2000);
     }
   </script>

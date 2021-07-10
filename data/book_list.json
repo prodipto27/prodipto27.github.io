@@ -6,7 +6,7 @@
                     "name": "Programming in ANSI C - Balagurusamy",
                     "edition": "7th",
                     "collection_credit": "UNAVAILABLE",
-                    "filename": "UNAVAILABLE"
+                    "url": "UNAVAILABLE"
                 }
             ],
             "Electrical and Electronic Circuit": [
@@ -14,25 +14,25 @@
                     "name": "A Textbook of  Electrical Technology",
                     "edition": "7th",
                     "collection_credit": "UNAVAILABLE",
-                    "filename": "UNAVAILABLE"
+                    "url": "UNAVAILABLE"
                 },
                 {
                     "name": "Electronic Devices and Circuit Theory",
                     "edition": "7th",
                     "collection_credit": "UNAVAILABLE",
-                    "filename": "UNAVAILABLE"
+                    "url": "UNAVAILABLE"
                 },
                 {
                     "name": "Introductory Circuit Analysis",
                     "edition": "13th",
                     "collection_credit": "Rakib Md Osman Faruque",
-                    "filename": "Introductory-Circuit-Analysis 13th edition global edition.pdf"
+                    "url": "https://drive.google.com/file/d/15WVJmU1uIWIHBkfbdqR9GqUgcFxv5v3Z/view?usp=sharing"
                 },
                 {
                     "name": "Introductory Circuit Analysis",
                     "edition": "10th",
                     "collection_credit": "Rakib Md Osman Faruque",
-                    "filename": "Robert-L.-Boylestad-Introductory-Circuit-Analysis-10th edition.pdf"
+                    "url": "https://drive.google.com/file/d/1vjTSjvNO-6I4S3Ea5wlMpF5BOHd0_9CJ/view?usp=sharing"
                 }
             ],
             "Calculus": [
@@ -40,13 +40,13 @@
                     "name": "Differential Calculus",
                     "edition": "7th",
                     "collection_credit": "Rakib Md Osman Faruque",
-                    "filename": "UNAVAILABLE"
+                    "url": "UNAVAILABLE"
                 },
                 {
                     "name": "Integral Calculus",
                     "edition": "7th",
                     "collection_credit": "Rakib Md Osman Faruque",
-                    "filename": "UNAVAILABLE"
+                    "url": "UNAVAILABLE"
                 }
             ],
             "Physics": [
@@ -54,7 +54,7 @@
                     "name": "Physics Part-II",
                     "edition": "7th",
                     "collection_credit": "Rakib Md Osman Faruque",
-                    "filename": "UNAVAILABLE"
+                    "url": "UNAVAILABLE"
                 }
 
             ],
@@ -63,7 +63,7 @@
                     "name": "Advanced Learners’ Degree General English",
                     "edition": "7th",
                     "collection_credit": "Rakib Md Osman Faruque",
-                    "filename": "UNAVAILABLE"
+                    "url": "UNAVAILABLE"
                 }
             ]
         }
@@ -76,7 +76,7 @@
                     "name": "Digital Systems Principles And Applications - Ronald Tocci - 10th Edition",
                     "edition": "10th",
                     "collection_credit": "Shakil Mahmud Sumon",
-                    "filename": "Digital Systems Principles And Applications - Ronald Tocci - 10th Edition.pdf"                    
+                    "url": "https://drive.google.com/file/d/1UO-TaWN_yKXkuAdFqRJv5Nv9TtPm_FsX/view?usp=sharing"                    
                 }
             ],
             "Discrete Mathematics": [
@@ -84,15 +84,15 @@
                     "name": "Discrete Mathematics and Its Applications - Kenneth Rosen - 7th Edition.pdf",
                     "edition": "7th",
                     "collection_credit": "Md. Sarwar Jahan Sabit",
-                    "filename": "Discrete Mathematics and Its Applications - Kenneth Rosen - 7th Edition.pdf"             
+                    "url": "https://drive.google.com/file/d/1kmU23FE38yO3Z0rUPzUzrJb3m3rsQtsi/view?usp=sharing"             
                 }
             ],
             "Linear Algebra": [
                 {
-                    "name": "Linear Algebra,",
+                    "name": "Linear Algebra",
                     "edition": "10th",
                     "collection_credit": "Tasin Mahmud",
-                    "filename": "Linear Algebra | Theory of Matrices - by Md Abdur Rahman.pdf"           
+                    "url": "https://drive.google.com/file/d/1wznA4VXJLspMW6t6NO9xxTvRSEfA2W0a/view?usp=sharing"           
                 }
             ],
             "Statistics and Probability": [
@@ -100,15 +100,15 @@
                     "name": "An Introduction to Statistics",
                     "edition": "10th",
                     "collection_credit": "Tasin Mahmud",
-                    "filename": "UNAVAILABLE"           
+                    "url": "UNAVAILABLE"           
                 }
             ],
             "History of the Emergence of Independent Bangladesh": [
                 {
                     "name": "History of  the Emergence of  Independent Bangladesh",
                     "edition": "10th",
-                    "collection_credit": "Tasin Mahmud",
-                    "filename": "UNAVAILABLE"           
+                    "collection_credit": "Abu Sufian",
+                    "url": "https://drive.google.com/file/d/1mvb1v1PC3ihIA3ePpcgR-X5rcrI_zVph/view?usp=sharing"           
                 }
             ]
         }
