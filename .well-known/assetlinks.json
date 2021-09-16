@@ -1,0 +1,5 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target" : { "namespace": "android_app", "package_name": "io.github.prodipto27.twa",
+                   "sha256_cert_fingerprints": ["57:A8:FB:28:F7:71:F1:08:72:7C:D1:97:72:79:91:DE:71:16:91:65:A8:76:FA:B2:1D:0F:7B:A3:05:8B:48:A7"] }
+    }]
