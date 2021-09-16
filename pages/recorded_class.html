@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Recorded Classes</title>
+    <link href="../md/material-components-web.min.css" rel="stylesheet">
+    <script src="../md/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="../md/md-icon.css">
+</head>
+
+<body>
+
+    <br/><br/><br/><br/>
+    <h3>
+        গোগনীয়তার খাতিরে ভিডিও প্লেলিস্টগুলোর লিংক এখানে না দিয়ে লিংক সম্বলিত ফেসবুক পোস্টে তোমাকে নিয়ে যাওয়া হচ্ছে।
+    </h3>
+
+    <br /><br /><br /><br /><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="window.open('https://www.facebook.com/groups/IST.CSE27th/permalink/613081512739482/')" align="center"
+        class="mdc-button mdc-button--raised">
+        <div class="mdc-button__ripple"></div>
+        <i class="material-icons mdc-button__icon" aria-hidden="true">link</i>
+        <span class="mdc-button__label">Open Facebook Post</span>
+    </button>
+
+    <!-- <div class="mdc-snackbar">
+		<div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+			<div class="mdc-snackbar__label" aria-atomic="false">
+				Can't send photo. Retry in 5 seconds.
+			</div>
+			<div class="mdc-snackbar__actions" aria-atomic="true">
+				<button type="button" class="mdc-button mdc-snackbar__action">
+					<div class="mdc-button__ripple"></div>
+					<span class="mdc-button__label">Retry</span>
+				</button>
+			</div>
+		</div>
+	</div> -->
+
+    <!--Facebook Link Share-->
+    <div class="mdc-dialog">
+        <div class="mdc-dialog__container">
+            <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
+                aria-describedby="my-dialog-content">
+                <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+                <h2 class="mdc-dialog__title" id="my-dialog-title">Choose a medium</h2>
+                <div class="mdc-dialog__content" id="my-dialog-content">
+                    <ul class="mdc-list mdc-list--avatar-list">
+                        <li id='fbapp' class="mdc-list-item" tabindex="0" data-mdc-dialog-action="none">
+                            <span class="mdc-list-item__text">Facebook App (Android)</span>
+                        </li>
+                        <li id='fbapplite' class="mdc-list-item" data-mdc-dialog-action="callisto">
+                            <span class="mdc-list-item__text">Facebook Lite App (Android)</span>
+                        </li>
+                        <li id="fbbrowser" class="mdc-list-item" data-mdc-dialog-action="callisto">
+                            <span class="mdc-list-item__text">Browser</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mdc-dialog__scrim"></div>
+    </div>
+    <script>
+        parent.postMessage("changeTitle", "*");
+        function showSnackbar(str) {
+            parent.postMessage("showSnack | " + str, "*");
+            console.log(str);
+        }
+    </script>
+
+    <!-- <script src="../js/md-snackbar.js"></script> -->
+    <script src="../js/open-facebook-post.js"></script>
+    <script>
+        openFbPost("www.facebook.com/groups/IST.CSE27th/permalink/613081512739482/");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+{
+    "1st Semester": [
+        {
+            "Structured Programming Language": [
+                {
+                    "name": "Programming in ANSI C - Balagurusamy",
+                    "edition": "7th",
+                    "collection_credit": "UNAVAILABLE",
+                    "url": "UNAVAILABLE"
+                }
+            ],
+            "Electrical and Electronic Circuit": [
+                {
+                    "name": "A Textbook of  Electrical Technology",
+                    "edition": "7th",
+                    "collection_credit": "UNAVAILABLE",
+                    "url": "UNAVAILABLE"
+                },
+                {
+                    "name": "Electronic Devices and Circuit Theory",
+                    "edition": "7th",
+                    "collection_credit": "UNAVAILABLE",
+                    "url": "UNAVAILABLE"
+                },
+                {
+                    "name": "Introductory Circuit Analysis",
+                    "edition": "13th",
+                    "collection_credit": "Rakib Md Osman Faruque",
+                    "url": "https://drive.google.com/file/d/15WVJmU1uIWIHBkfbdqR9GqUgcFxv5v3Z/view?usp=sharing"
+                },
+                {
+                    "name": "Introductory Circuit Analysis",
+                    "edition": "10th",
+                    "collection_credit": "Rakib Md Osman Faruque",
+                    "url": "https://drive.google.com/file/d/1vjTSjvNO-6I4S3Ea5wlMpF5BOHd0_9CJ/view?usp=sharing"
+                }
+            ],
+            "Calculus": [
+                {
+                    "name": "Differential Calculus",
+                    "edition": "7th",
+                    "collection_credit": "Rakib Md Osman Faruque",
+                    "url": "UNAVAILABLE"
+                },
+                {
+                    "name": "Integral Calculus",
+                    "edition": "7th",
+                    "collection_credit": "Rakib Md Osman Faruque",
+                    "url": "UNAVAILABLE"
+                }
+            ],
+            "Physics": [
+                {
+                    "name": "Physics Part-II",
+                    "edition": "7th",
+                    "collection_credit": "Rakib Md Osman Faruque",
+                    "url": "UNAVAILABLE"
+                }
+
+            ],
+            "English": [
+                {
+                    "name": "Advanced Learners’ Degree General English",
+                    "edition": "7th",
+                    "collection_credit": "Rakib Md Osman Faruque",
+                    "url": "UNAVAILABLE"
+                }
+            ]
+        }
+    ],
+
+    "2nd Semester": [
+        {
+            "Digital Systems Design": [
+                {
+                    "name": "Digital Systems Principles And Applications - Ronald Tocci - 10th Edition",
+                    "edition": "10th",
+                    "collection_credit": "Shakil Mahmud Sumon",
+                    "url": "https://drive.google.com/file/d/1UO-TaWN_yKXkuAdFqRJv5Nv9TtPm_FsX/view?usp=sharing"                    
+                }
+            ],
+            "Discrete Mathematics": [
+                {
+                    "name": "Discrete Mathematics and Its Applications - Kenneth Rosen - 7th Edition.pdf",
+                    "edition": "7th",
+                    "collection_credit": "Md. Sarwar Jahan Sabit",
+                    "url": "https://drive.google.com/file/d/1kmU23FE38yO3Z0rUPzUzrJb3m3rsQtsi/view?usp=sharing"             
+                }
+            ],
+            "Linear Algebra": [
+                {
+                    "name": "Linear Algebra",
+                    "edition": "10th",
+                    "collection_credit": "Tasin Mahmud",
+                    "url": "https://drive.google.com/file/d/1wznA4VXJLspMW6t6NO9xxTvRSEfA2W0a/view?usp=sharing"           
+                }
+            ],
+            "Statistics and Probability": [
+                {
+                    "name": "An Introduction to Statistics",
+                    "edition": "10th",
+                    "collection_credit": "Tasin Mahmud",
+                    "url": "UNAVAILABLE"           
+                }
+            ],
+            "History of the Emergence of Independent Bangladesh": [
+                {
+                    "name": "History of  the Emergence of  Independent Bangladesh",
+                    "edition": "10th",
+                    "collection_credit": "Abu Sufian",
+                    "url": "https://drive.google.com/file/d/1mvb1v1PC3ihIA3ePpcgR-X5rcrI_zVph/view?usp=sharing"           
+                }
+            ]
+        }
+    ]
+}

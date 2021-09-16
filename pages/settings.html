@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+
+    <style>
+        .dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+    </style>
+
+</head>
+
+<body>
+    <br/><br/><br/><br/>
+    <div style="display: flex;">
+        <h3>Select Default Page:</h3>
+        <div style="display: flex; padding-left: 30px;" class="dropdown">
+            <button onclick="showOptions()" class="dropbtn">Select</button>
+            <div onmouseleave='document.getElementsByClassName("dropdown-content")[0].style.display = "none";' class="dropdown-content">
+                <a onclick="addDefaultPage(event)" href="#" data-location="pages/credentials.html">Online Class Credentials</a>
+                <a onclick="addDefaultPage(event)" href="#" data-location="pages/routine.html">Routine</a>
+                <a onclick="addDefaultPage(event)" href="#" data-location="pages/syllabus.html">Syllabus</a>
+                <a onclick="addDefaultPage(event)" href="#" data-location="pages/books.html">Books</a>
+                <a onclick="addDefaultPage(event)" href="#" data-location="pages/recorded_class.html">Recorded Classes</a>
+                <a onclick="addDefaultPage(event)" href="#" data-location="pages/google_classroom.html">Join Google Classroom</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showOptions(){
+            document.getElementsByClassName("dropdown-content")[0].style.display = "block";
+        }
+
+        function addDefaultPage(event){
+            event.preventDefault();
+            localStorage.setItem("defaultPage", event.target.getAttribute("data-location"));
+            document.getElementsByClassName("dropdown-content")[0].style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+  </head>
+  <body>
+    <textarea id="input" name="code" cols="40" rows="5"></textarea>
+    <input id="password" name="code" type="password" />
+    <br /><br />
+    <button id="encrypt_btn" onclick="encrypt()">Encrypt</button>
+    <button id="decrypt_btn" onclick="decrypt()">Decrypt</button>
+    <br /><br />
+    <textarea id="output" name="code" cols="40" rows="5"></textarea>
+
+    <script>
+      var code = (function () {
+        return {
+          encryptMessage: function (messageToencrypt = "", secretkey = "") {
+            var encryptedMessage = CryptoJS.AES.encrypt(
+              messageToencrypt,
+              secretkey
+            );
+            return encryptedMessage.toString();
+          },
+          decryptMessage: function (encryptedMessage = "", secretkey = "") {
+            var decryptedBytes = CryptoJS.AES.decrypt(
+              encryptedMessage,
+              secretkey
+            );
+            var decryptedMessage = decryptedBytes.toString(CryptoJS.enc.Utf8);
+
+            return decryptedMessage;
+          },
+        };
+      })();
+
+      function encrypt() {
+          console.log("encrypt");
+          var inputText = document.getElementById("input").value;
+          var pass = document.getElementById("password").value;
+
+          var encryptedText = code.encryptMessage(inputText, pass);
+
+          document.getElementById("output").value = encryptedText;
+      }
+
+      function decrypt() {
+        console.log("decrypt");
+          var inputText = document.getElementById("input").value;
+          var pass = document.getElementById("password").value;
+
+          var decryptedText = code.decryptMessage(inputText, pass);
+
+          document.getElementById("output").value = decryptedText;
+      }
+    </script>
+  </body>
+</html>

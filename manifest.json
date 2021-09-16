@@ -1,0 +1,36 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "Prodipto27",
+    "short_name": "Prodipto27",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "https://prodipto27.github.io/",
+    "background_color": "#000000",
+    "theme_color": "#6200ee",
+    "categories": ["entertainment", "education", "utilities"],
+    "description": "প্রদীপ্ত-২৭ এর এক অ্যাপে সবকিছু!",
+    "orientation": "portrait",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+          "src": "images/android-icon-144x144.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        },
+        {
+          "src": "images/ist_logo.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        },
+        {
+          "src": "images/maskable_icon.png",
+          "sizes": "196x196",
+          "type": "image/png",
+          "purpose": "any maskable"
+        }
+    ],
+    "url": "https://prodipto27.github.io",
+    "screenshots": []
+}

@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Books</title>
+    <link href="../md/material-components-web.min.css" rel="stylesheet">
+    <script src="../md/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="../md/md-icon.css">
+    <!--<link rel="stylesheet" href="../css/booklist.css">-->
+</head>
+
+<body>
+
+    <!-- <div class="mdc-snackbar">
+        <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+            <div class="mdc-snackbar__label" aria-atomic="false">
+                Can't send photo. Retry in 5 seconds.
+            </div>
+            <div class="mdc-snackbar__actions" aria-atomic="true">
+                <button type="button" class="mdc-button mdc-snackbar__action">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Retry</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/md-snackbar.js"></script> -->
+    <br/><br/><br/>
+    <h3>এগুলো ছাড়াও অন্যান্য বই পেতে Other Resources সেকশনটি চেক করো</h3>
+    <div id="data"></div>
+    <script src="../books/book-list.js"></script>
+    
+
+    <script>
+        function showSnack(str){
+            parent.postMessage("showSnack | " + str, "*");
+            console.log(str);
+        }
+
+        function openBook(url, credit) {
+            if(url.includes("UNAVAILABLE")){
+                showSnack("বইটি বর্তমানে আপলোড করা নেই!");
+            }
+            else{
+                showSnack('সংগ্রহে - ' + credit);
+                setTimeout(function () {
+                    window.open(encodeURI(url), "_blank");
+                }, 2000);
+            }
+        }
+        parent.postMessage("changeTitle", "*");
+    </script>
+    <script src="../js/book-list-generator.js"></script>
+
+    <br/><br/><br/>
+
+</body>
+
+</html>

