@@ -20,7 +20,7 @@
 setTimeout(function () {
     var url = new URL(document.location.href);
     var c = url.searchParams.get("page");
-    console.log(c);
+    // console.log(c);
     if (c != null) {
         var items = document.getElementsByClassName('mdc-list-item');
         for (var i = 0; i < items.length; i++) {

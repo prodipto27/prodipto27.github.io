@@ -23,7 +23,7 @@
 	<meta content='200px' property='og:image:width' />
 	<meta content='200px' property='og:image:height' />
 	<meta property="fb:app_id" content="1145722559175311" />
-
+	<script src="js/pwa-install.js"></script>
 	<link href="md/material-components-web.min.css" rel="stylesheet">
 	<script src="md/material-components-web.min.js"></script>
 	<link rel="stylesheet" href="md/md-icon.css">
@@ -131,48 +131,18 @@
 		}
 	</script>
 	<script>
-		function hideBanner() {
-			document.getElementById("app-banner").style.display = "none";
-		}
+		// function hideBanner() {
+		// 	document.getElementById("app-banner").style.display = "none";
+		// }
 
 		if (window.matchMedia('(display-mode: standalone)').matches) {
 			console.log('display-mode is standalone');
-			hideBanner();
+			// hideBanner();
 		}
 		else {
 			console.log('display-mode isn\'t standalone');
 		}
 
-		let deferredPrompt;
-
-		const addBtn = document.querySelector('#pwa-install-button');
-		//addBtn.style.display = 'none';
-
-		window.addEventListener('beforeinstallprompt', (e) => {
-			// Prevent Chrome 67 and earlier from automatically showing the prompt
-			e.preventDefault();
-			// Stash the event so it can be triggered later.
-			deferredPrompt = e;
-			// Update UI to notify the user they can add to home screen
-			//addBtn.style.display = 'block';
-
-			addBtn.addEventListener('click', (e) => {
-				// hide our user interface that shows our A2HS button
-				//addBtn.style.display = 'none';
-				// Show the prompt
-				deferredPrompt.prompt();
-				// Wait for the user to respond to the prompt
-				deferredPrompt.userChoice.then((choiceResult) => {
-					if (choiceResult.outcome === 'accepted') {
-						console.log('User accepted the A2HS prompt');
-						hideBanner();
-					} else {
-						console.log('User dismissed the A2HS prompt');
-					}
-					deferredPrompt = null;
-				});
-			});
-		});
 	</script>
 
 	<!-- <script>
@@ -190,6 +160,7 @@
 				<span class="mdc-top-app-bar__title">Online Class Credentials</span>
 			</section>
 			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+				<!-- onclick="pwaInstall()" -->
 				<button id='install-button' onclick="pwaInstall()"
 					class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
 					aria-label="Favorite">favorite</button>
@@ -358,6 +329,7 @@
 						<span class="mdc-button__label">Cancel</span>
 					</button>
 					<button id="pwa-install-accept" type="button" class="mdc-button mdc-dialog__button"
+						onclick="install()"
 						data-mdc-dialog-action="accept" data-mdc-dialog-button-default>
 						<div class="mdc-button__ripple"></div>
 						<span class="mdc-button__label">Accept</span>
@@ -370,7 +342,7 @@
 
 	<script src="js/md-dialog.js"></script>
 	<!-- <script src="js/open-facebook-post.js"></script> -->
-	<script src="js/pwa-install.js"></script>
+	
 	<script src="js/url-reslover.js"></script>
 	<script src="js/page-sharer.js"></script>
 
@@ -385,9 +357,9 @@
 			document.getElementById('install-menu').remove();
 		}
 
-		document.getElementById('dialog-cancel').addEventListener('click', (e) => {
-			document.getElementsByClassName("mdc-dialog__button")[1].id = 'pwa-install-accept';
-		});
+		// document.getElementById('dialog-cancel').addEventListener('click', (e) => {
+		// 	document.getElementsByClassName("mdc-dialog__button")[1].id = 'pwa-install-accept';
+		// });
 
 		function clearCache() {
 			showSnackbar("Clearning cache data...", "OK")
@@ -433,6 +405,40 @@
 
 	</script>
 	
+	<script>
+		let deferredPrompt;
+	
+		const addBtn = document.getElementById('pwa-install-accept');
+		//addBtn.style.display = 'none';
+		console.log(addBtn);
+		window.addEventListener('beforeinstallprompt', (e) => {
+			// Prevent Chrome 67 and earlier from automatically showing the prompt
+			console.log("beforeinstallprompt")
+			e.preventDefault();
+			// Stash the event so it can be triggered later.
+			deferredPrompt = e;
+			// Update UI to notify the user they can add to home screen
+			//addBtn.style.display = 'block';
+			return false;
+		});
+
+		function install(){
+			console.log("clicked");
+			deferredPrompt.prompt();
+			// Wait for the user to respond to the prompt
+			deferredPrompt.userChoice.then((choiceResult) => {
+				if (choiceResult.outcome === 'accepted') {
+					console.log('User accepted the A2HS prompt');
+					hideBanner();
+				} else {
+					console.log('User dismissed the A2HS prompt');
+				}
+				deferredPrompt = null;
+			});
+		}
+
+	</script>
+
 	<script src="js/sweetalert2@10.js"></script>
 	<script src="js/check_version_change.js"></script>
 	

@@ -166,7 +166,7 @@ function login() {
 
 var pass;
 pass = localStorage.getItem("passString");
-console.log(pass);
+// console.log(pass);
 if (pass != null) {
     var crypt_file = new XMLHttpRequest();
     crypt_file.onreadystatechange = function () {
