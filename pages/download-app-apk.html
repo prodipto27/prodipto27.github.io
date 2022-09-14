@@ -30,7 +30,7 @@
         }
     </style>
 
-</head>>
+</head>
 
 <body>
     <br /><br /><br /><br /><br />
@@ -41,6 +41,12 @@
         <i class="material-icons mdc-button__icon" aria-hidden="true">system_update</i>
         <span class="mdc-button__label">Download Apk Version (2 MB)</span>
     </button>
+    <button onclick="downloadFlutter()" align="center"
+        class="mdc-button mdc-button--raised">
+        <div class="mdc-button__ripple"></div>
+        <i class="material-icons mdc-button__icon" aria-hidden="true">system_update</i>
+        <span class="mdc-button__label">Download Flutter Version </span>
+    </button>
 
     <script>
         function downloadApk() {
@@ -49,7 +55,13 @@
                 var data = await response.json();
                 console.log(data[0].assets[0].browser_download_url);
                 window.open(data[0].assets[0].browser_download_url);
+            })()
+        }
 
+        function downloadFlutter() {
+            (async () => {
+                var url = 'https://github.com/prodipto27/prodipto27_flutter_version/releases/latest';
+                window.open(url);
             })()
         }
 
