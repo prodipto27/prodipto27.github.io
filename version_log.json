@@ -1,4 +1,4 @@
 {
-  "version": "prodipto27-v0.8",
-  "changes": "Added new TWA SHA256 key, login page bug fix."
+  "version": "prodipto27-v0.8.1",
+  "changes": "Fixed minor bugs."
 }
