@@ -1,5 +1,16 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target" : { "namespace": "android_app", "package_name": "io.github.prodipto27.twa",
-                   "sha256_cert_fingerprints": ["57:A8:FB:28:F7:71:F1:08:72:7C:D1:97:72:79:91:DE:71:16:91:65:A8:76:FA:B2:1D:0F:7B:A3:05:8B:48:A7", "1F:E9:46:CE:46:56:50:46:1F:D8:2C:6D:B7:2A:62:98:24:80:61:D0:EF:F9:10:8D:2C:C1:33:C7:1C:D4:EA:9F"] }
-    }]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.prodipto27.twa",
+      "sha256_cert_fingerprints": [
+        "57:A8:FB:28:F7:71:F1:08:72:7C:D1:97:72:79:91:DE:71:16:91:65:A8:76:FA:B2:1D:0F:7B:A3:05:8B:48:A7",
+        "1F:E9:46:CE:46:56:50:46:1F:D8:2C:6D:B7:2A:62:98:24:80:61:D0:EF:F9:10:8D:2C:C1:33:C7:1C:D4:EA:9F",
+        "47:0A:51:E3:CB:BA:9B:06:02:2E:A7:31:7C:3F:74:3C:1C:F2:13:A7:21:D8:83:54:6F:39:CE:40:55:23:14:5F"
+      ]
+    }
+  }
+]
