@@ -232,7 +232,7 @@
 					<span class="mdc-list-item__text">Settings</span>
 				</a>
 				<hr class="mdc-list-divider">
-				<a class="mdc-list-item" onclick='loadIframe("Download Apk Version", "pages/download-app-apk.html")'
+				<a id="alternate-app-links" class="mdc-list-item" onclick='loadIframe("Download Apk Version", "pages/download-app-apk.html")'
 					data-location="?page=download-app-apk.html">
 					<span class="mdc-list-item__ripple"></span>
 					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">help</i>
@@ -437,6 +437,13 @@
 			});
 		}
 
+	</script>
+
+	<script>
+		if(document.referrer.includes('android-app://')){
+			// hide alternate-app-links id
+			document.getElementById('alternate-app-links').style.display = 'none';
+		}
 	</script>
 
 	<script src="js/sweetalert2@10.js"></script>
