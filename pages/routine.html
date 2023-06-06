@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="theme-color" content="#6200ee">
-	<meta content='#6200ee' name='msapplication-navbutton-color' />
-	<meta content='#6200ee' name='apple-mobile-web-app-status-bar-style' />
-	<link rel="icon" href="https://prodipto27.github.io/images/favicon.ico" type="image/ico" sizes="48x48">
-	<meta content='IST প্রদীপ্ত-২৭ এর ক্লাস রুটিন!' name='description'/>
-	<meta property="og:url" content="https://prodipto27.github.io" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="ক্লাস রুটিন - প্রদীপ্ত-২৭ App" />
-	<meta property="og:description" content="IST প্রদীপ্ত-২৭ এর ক্লাস রুটিন" />
-	<meta content='prodipto27, prodipto 27, prodipto27.github.io, প্রদীপ্ত-২৭, প্রদীপ্ত ২৭' name='keywords'/>
-	<meta property="og:image" content="https://prodipto27.github.io/images/ist_logo.png" />
-	<meta content='200px' property='og:image:width' />
-	<meta content='200px' property='og:image:height' />
-	<meta property="fb:app_id" content="1145722559175311"/>
+    <meta content='#6200ee' name='msapplication-navbutton-color' />
+    <meta content='#6200ee' name='apple-mobile-web-app-status-bar-style' />
+    <link rel="icon" href="https://prodipto27.github.io/images/favicon.ico" type="image/ico" sizes="48x48">
+    <meta content='IST প্রদীপ্ত-২৭ এর ক্লাস রুটিন!' name='description' />
+    <meta property="og:url" content="https://prodipto27.github.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ক্লাস রুটিন - প্রদীপ্ত-২৭ App" />
+    <meta property="og:description" content="IST প্রদীপ্ত-২৭ এর ক্লাস রুটিন" />
+    <meta content='prodipto27, prodipto 27, prodipto27.github.io, প্রদীপ্ত-২৭, প্রদীপ্ত ২৭' name='keywords' />
+    <meta property="og:image" content="https://prodipto27.github.io/images/ist_logo.png" />
+    <meta content='200px' property='og:image:width' />
+    <meta content='200px' property='og:image:height' />
+    <meta property="fb:app_id" content="1145722559175311" />
 
     <style>
         table {
@@ -56,7 +56,6 @@
             background-color: #ddd;
             color: rgb(41, 78, 199);
         }
-
     </style>
 </head>
 
@@ -65,8 +64,11 @@
     <br /><br />
     <br /><br />
     <h2 align="center">Class Routine</h2>
-    <p align="center">To get updated routine check the <a target="_blank" href="https://drive.google.com/file/d/1lG7GASa_gHtk8p0f0P4YCDS8kchYp2-q/view">Class Routine</a> from <a target="_blank" href="https://classroom.google.com/c/NDU3NDM5NDA4NDQ5/p/NDU3NDUyMDY5NzM4/details">Google Classroom</a>.</p>
-	
+    <p align="center">To get updated routine check the <a target="_blank"
+            href="https://drive.google.com/file/d/1lG7GASa_gHtk8p0f0P4YCDS8kchYp2-q/view">Class Routine</a> from <a
+            target="_blank" href="https://classroom.google.com/c/NDU3NDM5NDA4NDQ5/p/NDU3NDUyMDY5NzM4/details">Google
+            Classroom</a>.</p>
+
     <!-- <table align="center">
         <tbody>
             <caption><b>Group A</b></caption>
@@ -202,56 +204,50 @@
             </tr>
         </tbody>
     </table> -->
-    
+
     <br /><br />
-	
-	
+
+
     <script>
         parent.postMessage("changeTitle", "*");
     </script>
-	
-	<script>
-		
-		function fetch_routine_html(){
-			fetch('https://orange-cake-0407.prodipto27.workers.dev/')
-			.then(function(response) {
-				// When the page is loaded convert it to text
-				return response.text()
-			})
-			.then(function(html) {
-				// Initialize the DOM parser
-				//var parser = new DOMParser();
 
-				// Parse the text
-				// var doc = parser.parseFromString(html, "text/html");
+    <script>
 
-				// You can now even select part of that html as you would in the regular DOM 
-				// Example:
-				// var docArticle = doc.querySelector('article').innerHTML;
+        function fetch_routine_html() {
+            fetch('https://orange-cake-0407.prodipto27.workers.dev/')
+                .then(function (response) {
+                    // When the page is loaded, convert it to text
+                    return response.text();
+                })
+                .then(function (html) {
+                    // Add padding to the body element
+                    var modifiedHtml = html.replace('<body', '<body style="padding-top: 100px;"');
 
-				//console.log(html);
-				localStorage.setItem("routine_html", html);
-				document.querySelector('html').innerHTML = html;
-			})
-			.catch(function(err) {  
-				console.log('Failed to fetch page: ', err);  
-			});	
-		}
-		
-		let html = localStorage.getItem("routine_html");
-		
-		if(window.navigator.onLine == true){
-			fetch_routine_html()
-		}
-		else{
-			if(html != null){
-				document.querySelector('html').innerHTML = html;
-			}
-			else{
-				fetch_routine_html()
-			}
-		}
-	</script>
+                    // Set the modified HTML in localStorage
+                    localStorage.setItem("routine_html", modifiedHtml);
+
+                    // Set the modified HTML in the document
+                    document.querySelector('html').innerHTML = modifiedHtml;
+                })
+                .catch(function (err) {
+                    console.log('Failed to fetch page: ', err);
+                });
+        }
+
+        let html = localStorage.getItem("routine_html");
+
+        if (window.navigator.onLine == true) {
+            fetch_routine_html();
+        } else {
+            if (html != null) {
+                document.querySelector('html').innerHTML = html;
+            } else {
+                fetch_routine_html();
+            }
+        }
+
+    </script>
 
 </body>
 
