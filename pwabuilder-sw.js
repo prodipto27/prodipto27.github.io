@@ -1,6 +1,6 @@
 // This is the service worker with the Cache-first network
 
-const CACHE = "prodipto27-v0.8.5-sd34rf";
+const CACHE = "prodipto27-v0.8.5-fg5645";
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
